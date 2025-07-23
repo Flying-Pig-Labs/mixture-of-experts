@@ -1,233 +1,159 @@
-Anchoring bias
-Common source bias
-Conservatism bias
-Functional fixedness
-Law of the instrument
-Apophenia
-Clustering illusion
-Illusory correlation
-Pareidolia
-Availability heuristic
-Anthropocentric thinking
-Anthropomorphism
-Attentional bias
-Frequency illusion
-Implicit association
-Fluency heuristic
-Salience bias
-Selection bias
-Survivorship bias
-Quantification bias
-Well travelled road effect
-Cognitive dissonance
-Normalcy bias
-Effort justification
-IKEA effect
-Ben Franklin effect
-Confirmation bias
-Backfire effect
-Congruence bias
-Experimenter's bias
-Observer-expectancy effect
-Selective perception
-Semmelweis reflex
-Egocentric bias
-Bias blind spot
-False consensus effect
-False uniqueness bias
-Forer effect
-Illusion of asymmetric insight
-Illusion of control
-Illusion of transparency
-Illusion of validity
-Illusory superiority
-Naïve cynicism
-Naïve realism
-Overconfidence effect
-Planning fallacy
-Restraint bias
-Trait ascription bias
-Third-person effect
-Base rate fallacy
-Compassion fade
-Conjunction fallacy
-Duration neglect
-Hyperbolic discounting
-Insensitivity to sample size
-Less-is-better effect
-Neglect of probability
-Scope neglect
-Zero-risk bias
-Agent detection bias
-Automation bias
-Gender bias
-Sexual overperception bias
-Stereotyping
-Framing effect
-Contrast effect
-Decoy effect
-Default effect
-Denomination effect
-Distinction bias
-Domain neglect bias
-Context neglect bias
-Berkson's paradox
-Escalation of commitment
-Gambler's fallacy
-Hot-hand fallacy
-Plan continuation bias
-Subadditivity effect
-Time-saving bias
-Zero-sum bias
-Ambiguity effect
-Disposition effect
-Dread aversion
-Endowment effect
-Loss aversion
-Pseudocertainty effect
-Status quo bias
-System justification
-Dunning–Kruger effect
-Hot-cold empathy gap
-Hard–easy effect
-Illusion of explanatory depth
-Impostor Syndrome
-Objectivity illusion
-Belief bias
-Illusory truth effect
-Rhyme as reason effect
-Subjective validation
-Action bias
-Additive bias
-Attribute substitution
-Curse of knowledge
-Declinism
-Embodiment bias
-End-of-history illusion
-Exaggerated expectation
-Form function attribution bias
-Fundamental pain bias
-Hedonic recall bias
-Hindsight bias
-Impact bias
-Information bias
-Interoceptive bias
-Money illusion
-Moral credential effect
-Motonormativity
-Non-adaptive choice switching
-Mere exposure effect
-Omission bias
-Optimism bias
-Ostrich effect
-Outcome bias
-Pessimism bias
-Present bias
-Plant blindness
-Prevention bias
-Probability matching
-Pro-innovation bias
-Projection bias
-Proportionality bias
-Recency illusion
-Systematic bias
-Risk compensation
-Surrogation
-Teleological Bias
-Turkey illusion
-Unconscious bias
-Unit bias
-Value selection bias
-Weber–Fechner law
-Women are wonderful effect
-Authority bias
-Cheerleader effect
-Halo effect
-Actor-observer bias
-Defensive attribution hypothesis
-Extrinsic incentives bias
-Fundamental attribution error
-Group attribution error
-Hostile attribution bias
-Intentionality bias
-Just-world fallacy
-Moral luck
-Puritanical bias
-Self-serving bias
-Ultimate attribution error
-Availability cascade
-Bandwagon effect
-Courtesy bias
-Groupthink
-Groupshift
-Social desirability bias
-Truth bias
-Not invented here
-Outgroup homogeneity bias
-Assumed similarity bias
-Outgroup favoritism
-Pygmalion effect
-Reactance
-Reactive devaluation
-Social comparison bias
-Shared information bias
-Worse-than-average effect
-Cryptomnesia
-False memory
-Social cryptomnesia
-Source confusion
-Suggestibility
-Perky effect
-Availability bias
-Bizarreness effect
-Boundary extension
-Childhood amnesia
-Choice-supportive bias
-Consistency bias
-Continued influence effect
-Context effect
-Cross-race effect
-Euphoric recall
-Fading affect bias
-Generation effect
-Gender differences in eyewitness memory
-Google effect
-Humor effect
-Lag effect
-Leveling and sharpening
-Levels-of-processing effect
-List-length effect
-Memory inhibition
-Misinformation effect
-Modality effect
-Mood-congruent memory bias
-Negativity bias
-Next-in-line effect
-Part-list cueing effect
-Peak–end rule
-Persistence
-Picture superiority effect
-Placement bias
-Positivity effect
-Primacy effect
-Processing difficulty effect
-Recency effect
-Reminiscence bump
-Repetition blindness
-Rosy retrospection
-Saying is believing effect
-Self-relevance effect
-Serial position effect
-Spacing effect
-Spotlight effect
-Stereotype bias
-Suffix effect
-Subadditivity effect
-Tachypsychia
-Telescoping effect
-Testing effect
-Tip of the tongue phenomenon
-Travis syndrome
-Verbatim effect
-von Restorff effect
-Zeigarnik effect
+# Cognitive Biases
+
+A comprehensive list of cognitive biases that affect human decision-making and perception.
+
+## Table of Contents
+
+- [Information Processing Biases](#information-processing-biases)
+- [Attention and Perception Biases](#attention-and-perception-biases)
+- [Self-Perception and Ego Biases](#self-perception-and-ego-biases)
+- [Probability and Belief Biases](#probability-and-belief-biases)
+- [Social and Group Biases](#social-and-group-biases)
+- [Memory Biases](#memory-biases)
+- [Decision-Making Biases](#decision-making-biases)
+- [Attribution Biases](#attribution-biases)
+
+## Information Processing Biases
+
+### Anchoring and Adjustment
+- **Anchoring bias** - Over-reliance on the first piece of information encountered
+- **Conservatism bias** - Insufficient revision of beliefs when presented with new evidence
+- **Functional fixedness** - Limits on using an object only in the traditional way
+- **Law of the instrument** - Over-reliance on familiar tools or methods
+
+### Pattern Recognition
+- **Apophenia** - Tendency to perceive meaningful patterns in random data
+- **Clustering illusion** - Seeing patterns in random sequences
+- **Illusory correlation** - Perceiving a relationship between unrelated variables
+- **Pareidolia** - Seeing patterns in random stimuli (e.g., faces in clouds)
+
+### Information Availability
+- **Availability heuristic** - Overweighting easily recalled information
+- **Common source bias** - Combining data from the same source as if independent
+- **Availability cascade** - Self-reinforcing process of collective belief formation
+
+## Attention and Perception Biases
+
+### Focus and Salience
+- **Attentional bias** - Recurring thoughts affect perception
+- **Frequency illusion** - Increased awareness makes something seem more common
+- **Salience bias** - Focus on prominent features while ignoring others
+- **Spotlight effect** - Overestimating how much others notice us
+
+### Selection and Filtering
+- **Selection bias** - Non-representative samples in data collection
+- **Survivorship bias** - Focusing on survivors while ignoring failures
+- **Confirmation bias** - Seeking information that confirms existing beliefs
+- **Selective perception** - Expectations influence perception
+
+## Self-Perception and Ego Biases
+
+### Superiority and Control
+- **Illusory superiority** - Overestimating one's abilities relative to others
+- **Illusion of control** - Overestimating personal influence on events
+- **Overconfidence effect** - Excessive confidence in one's judgments
+- **Dunning-Kruger effect** - Incompetent individuals overestimate their ability
+
+### Self-Awareness
+- **Bias blind spot** - Recognizing bias in others but not oneself
+- **Illusion of transparency** - Overestimating how well others know our mental state
+- **Illusion of asymmetric insight** - Believing we know others better than they know us
+- **Objectivity illusion** - Believing oneself to be free from bias
+
+### Social Self-Perception
+- **False consensus effect** - Overestimating agreement with our opinions
+- **False uniqueness bias** - Underestimating commonality of abilities
+- **Third-person effect** - Believing others are more influenced than oneself
+- **Impostor syndrome** - Persistent doubt about one's accomplishments
+
+## Probability and Belief Biases
+
+### Statistical Reasoning
+- **Base rate fallacy** - Ignoring general prevalence information
+- **Conjunction fallacy** - Believing specific conditions are more probable
+- **Gambler's fallacy** - Believing past events affect future probabilities
+- **Hot-hand fallacy** - Believing in streaks in random sequences
+
+### Risk Assessment
+- **Zero-risk bias** - Preference for eliminating risk over reducing it
+- **Neglect of probability** - Disregarding probability when making decisions
+- **Ambiguity effect** - Avoiding options with unknown probabilities
+- **Pseudocertainty effect** - Treating probable events as certain
+
+## Social and Group Biases
+
+### Group Dynamics
+- **Bandwagon effect** - Adopting beliefs because others do
+- **Groupthink** - Conformity pressure in cohesive groups
+- **Social desirability bias** - Answering to be viewed favorably
+- **Courtesy bias** - Giving polite rather than honest opinions
+
+### Intergroup Relations
+- **Outgroup homogeneity bias** - Seeing outgroup members as more similar
+- **Not invented here** - Aversion to ideas from outside the group
+- **Reactive devaluation** - Devaluing proposals from adversaries
+- **Cross-race effect** - Difficulty recognizing faces of other races
+
+### Social Perception
+- **Halo effect** - Overall impression influences specific judgments
+- **Cheerleader effect** - Individuals seem more attractive in groups
+- **Authority bias** - Attributing greater accuracy to authority figures
+- **Pygmalion effect** - Higher expectations lead to improved performance
+
+## Memory Biases
+
+### Recall Effects
+- **Primacy effect** - Better recall of first items
+- **Recency effect** - Better recall of last items
+- **Serial position effect** - Combined primacy and recency effects
+- **Peak-end rule** - Judging experiences by peak and end moments
+
+### Memory Distortion
+- **Rosy retrospection** - Remembering past more positively
+- **Hindsight bias** - Seeing past events as predictable
+- **False memory** - Recalling events that didn't occur
+- **Source confusion** - Misattributing the source of memories
+
+### Memory Enhancement
+- **Picture superiority effect** - Pictures remembered better than words
+- **Generation effect** - Better memory for self-generated information
+- **Humor effect** - Humorous items better remembered
+- **Von Restorff effect** - Distinctive items better remembered
+
+## Decision-Making Biases
+
+### Loss and Status Quo
+- **Loss aversion** - Losses loom larger than gains
+- **Endowment effect** - Overvaluing what we own
+- **Status quo bias** - Preference for current state
+- **System justification** - Defending existing social arrangements
+
+### Framing and Context
+- **Framing effect** - Decisions influenced by presentation
+- **Contrast effect** - Enhancement or reduction by comparison
+- **Decoy effect** - Preference changes with irrelevant alternatives
+- **Default effect** - Tendency to stick with default options
+
+### Action and Inaction
+- **Action bias** - Preference for action over inaction
+- **Omission bias** - Judging harmful actions worse than omissions
+- **Escalation of commitment** - Increasing investment in failing courses
+- **Plan continuation bias** - Continuing original plans despite changes
+
+## Attribution Biases
+
+### Fundamental Errors
+- **Fundamental attribution error** - Overemphasizing personality over situation
+- **Actor-observer bias** - Different explanations for own vs. others' behavior
+- **Self-serving bias** - Attributing success internally, failure externally
+- **Ultimate attribution error** - Extending attributions to groups
+
+### Intentionality
+- **Hostile attribution bias** - Assuming malicious intent
+- **Intentionality bias** - Overestimating intentional actions
+- **Just-world fallacy** - Believing people get what they deserve
+- **Defensive attribution hypothesis** - Attributing blame to avoid vulnerability
+
+---
+
+*Note: This list represents common cognitive biases identified in psychological research. Understanding these biases can help improve decision-making and critical thinking.*
