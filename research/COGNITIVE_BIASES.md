@@ -1,6 +1,6 @@
 # Cognitive Biases Affecting the Product Development Lifecycle
 
-> **Note:** Each bias is listed with a brief description and circumstances that tend to exacerbate its effects (e.g. time pressure, data overload, stakeholder pressure, ambiguity, etc.). This list covers biases influencing internal team decisions and biases affecting user behavior/feedback across ideation, design, prototyping, testing, launch, and post-launch phases.
+> **Note:** Each bias is listed with a brief description and circumstances that tend to exacerbate its effects (e.g., time pressure, data overload, stakeholder pressure, ambiguity, etc.). This list covers biases influencing internal team decisions and biases affecting user behavior/feedback across ideation, design, prototyping, testing, launch, and post-launch phases.
 
 ## Table of Contents
 
@@ -50,7 +50,7 @@
 
 ### Confirmation Bias
 
-The tendency to favor information that confirms our preexisting beliefs or hypotheses, while undervaluing or dismissing contradictory evidence ([maze.co](https://maze.co)). In product teams, this can lead to cherry-picking user feedback or market data that supports an initial idea, ignoring warning signs.
+The tendency to favor information that confirms our preexisting beliefs or hypotheses, while undervaluing or dismissing contradictory evidence (Maze.co, 2023). In product teams, this can lead to cherry-picking user feedback or market data that supports an initial idea, ignoring warning signs.
 
 **Exacerbating factors:**
 - Ambiguity in data or outcomes (leading teams to interpret results in a self-serving way)
@@ -59,7 +59,7 @@ The tendency to favor information that confirms our preexisting beliefs or hypot
 
 ### Anchoring Bias (Anchoring Effect)
 
-A tendency to rely too heavily on the first piece of information encountered ("the anchor") when making decisions ([maze.co](https://maze.co)). Early estimates, first ideas, or initial user feedback set a reference point that skews subsequent judgments.
+A tendency to rely too heavily on the first piece of information encountered ("the anchor") when making decisions (Maze.co, 2023). Early estimates, first ideas, or initial user feedback set a reference point that skews subsequent judgments.
 
 **Exacerbating factors:**
 - High uncertainty or lack of experience (making the first data point more influential)
@@ -68,16 +68,16 @@ A tendency to rely too heavily on the first piece of information encountered ("t
 
 ### Framing Effect
 
-When the same information leads to different decisions depending on how it's presented or "framed." For example, describing a feature's adoption in terms of gains ("5% of users loved it") vs. losses ("95% didn't care for it") can sway perceptions ([zentao.pm](https://zentao.pm)). In design and stakeholder discussions, positive framing can hide risks, while negative framing can induce undue caution.
+When the same information leads to different decisions depending on how it's presented or "framed." For example, describing a feature's adoption in terms of gains ("5% of users loved it") vs. losses ("95% didn't care for it") can sway perceptions (ZenTao.pm, 2023). In design and stakeholder discussions, positive framing can hide risks, while negative framing can induce undue caution.
 
 **Exacerbating factors:**
-- Stakeholder influence on narrative (e.g. wanting to "sell" a concept)
+- Stakeholder influence on narrative (e.g., wanting to "sell" a concept)
 - Ambiguous results that allow multiple interpretations
 - Stressful presentations where teams might spin information to avoid conflict
 
 ### Primacy/Recency (Serial Position Effect)
 
-People tend to strongly recall the first and last items in a sequence, more than the middle ([maze.co](https://maze.co)). In product contexts, the first idea pitched in a meeting (primacy) or the most recent user test results (recency) can carry disproportionate weight.
+People tend to strongly recall the first and last items in a sequence, more than the middle (Maze.co, 2023). In product contexts, the first idea pitched in a meeting (primacy) or the most recent user test results (recency) can carry disproportionate weight.
 
 **Exacerbating factors:**
 - Long lists of features or feedback (making middle items forgettable)
@@ -86,35 +86,35 @@ People tend to strongly recall the first and last items in a sequence, more than
 
 ### Availability Heuristic
 
-Judging importance or frequency of issues based on how easily examples come to mind ([zentao.pm](https://zentao.pm)). A dramatic recent outage or a loud customer complaint may lead the team to over-prioritize that issue, assuming it's common.
+Judging importance or frequency of issues based on how easily examples come to mind (ZenTao.pm, 2023). A dramatic recent outage or a loud customer complaint may lead the team to over-prioritize that issue, assuming it's common.
 
 **Exacerbating factors:**
-- Recent or vivid incidents (e.g. an executive's recent anecdote about a bug)
+- Recent or vivid incidents (e.g., an executive's recent anecdote about a bug)
 - Incomplete data (relying on memory instead of comprehensive analysis)
 - Time constraints that lead to decisions based on readily recalled examples rather than all evidence
 
 ### Planning Fallacy
 
-A common bias where people underestimate the time, costs, or risks involved in future actions and overestimate the benefits ([monday.com](https://monday.com)). Teams falling prey to this bias set overly optimistic timelines and budgets for product development.
+A common bias where people underestimate the time, costs, or risks involved in future actions and overestimate the benefits (Monday.com, 2023). Teams falling prey to this bias set overly optimistic timelines and budgets for product development.
 
 **Exacerbating factors:**
-- Optimism and enthusiasm at project start (focusing on best-case scenarios while ignoring past complexity) ([monday.com](https://monday.com))
+- Optimism and enthusiasm at project start (focusing on best-case scenarios while ignoring past complexity) (Monday.com, 2023)
 - Pressure from stakeholders to deliver quickly
 - Insufficient contingency planning for known unknowns
 
 ### Sunk Cost Fallacy (Escalation of Commitment)
 
-The tendency to continue investing in a project or feature because of the resources already spent, even when it's clear it's likely to fail ([condens.io](https://condens.io)). Product teams may keep building a poorly performing feature simply because "we've come this far" or a lot of effort/money has been invested.
+The tendency to continue investing in a project or feature because of the resources already spent, even when it's clear it's likely to fail (Condens.io, 2023). Product teams may keep building a poorly performing feature simply because "we've come this far" or a lot of effort/money has been invested.
 
 **Exacerbating factors:**
 - Emotional attachment to the project
 - Fear of admitting failure to stakeholders
 - Long development cycles (larger sunk costs)
-- High ambiguity can worsen this, as teams "fake rationalize" further investment to avoid confronting regret ([condens.io](https://condens.io))
+- High ambiguity can worsen this, as teams "fake rationalize" further investment to avoid confronting regret (Condens.io, 2023)
 
 ### Overconfidence Bias
 
-Overestimating one's own knowledge, accuracy of estimates, or ability to succeed. In product development this might mean a team believes it innately knows what users want or assumes their plan has minimal risk. For example, a product manager might be too sure of understanding customer needs and skip research ([medium.com](https://medium.com)).
+Overestimating one's own knowledge, accuracy of estimates, or ability to succeed. In product development this might mean a team believes it innately knows what users want or assumes their plan has minimal risk. For example, a product manager might be too sure of understanding customer needs and skip research (Medium.com, 2023).
 
 **Exacerbating factors:**
 - Prior successes leading to complacency
@@ -123,10 +123,10 @@ Overestimating one's own knowledge, accuracy of estimates, or ability to succeed
 
 ### Optimism Bias
 
-A specific overconfidence in positive outcomes – assuming things will go better than they likely will. Teams may underestimate potential problems and assume launch will be smooth. This bias can manifest as underestimating development and testing effort ([medium.com](https://medium.com)) or downplaying market risks.
+A specific overconfidence in positive outcomes – assuming things will go better than they likely will. Teams may underestimate potential problems and assume launch will be smooth. This bias can manifest as underestimating development and testing effort (Medium.com, 2023) or downplaying market risks.
 
 **Exacerbating factors:**
-- High enthusiasm (e.g. innovative projects generating excitement)
+- High enthusiasm (e.g., innovative projects generating excitement)
 - Lack of historical data to counter rosy assumptions
 - Cultural pressures to present optimistic plans (thus neglecting contingency planning)
 
@@ -421,4 +421,66 @@ This may include techniques like:
 
 With vigilance and the right processes, teams can reduce bias and make more objective, user-centered decisions throughout the product lifecycle.
 
-**Sources:** The list above synthesizes findings from cognitive psychology and industry case studies, including user research guidelines ([maze.co](https://maze.co)), product management analyses ([condens.io](https://condens.io)), and behavioral science literature on decision-making biases ([thedecisionlab.com](https://thedecisionlab.com), [monday.com](https://monday.com)). These sources provide detailed examples of how biases manifest in product development and strategies to avoid them.
+## Quick Reference: Common Cognitive Biases
+
+### Information Processing & Interpretation
+- **Confirmation Bias** - Favoring confirming information
+- **Anchoring Bias** - Over-relying on first information
+- **Framing Effect** - Different decisions based on presentation
+- **Availability Heuristic** - Judging by easily recalled examples
+- **Clustering Illusion** - Seeing patterns in randomness
+- **Distinction Bias** - Overemphasizing small differences in comparisons
+
+### Memory & Perception
+- **Primacy/Recency Effect** - Remembering first/last items best
+- **Hindsight Bias** - "Knew-it-all-along" effect
+- **Peak-End Rule** - Judging experiences by peak and end moments
+- **Curse of Knowledge** - Forgetting what it's like not to know
+
+### Decision-Making & Judgment
+- **Planning Fallacy** - Underestimating time/costs/risks
+- **Sunk Cost Fallacy** - Continuing due to past investment
+- **Outcome Bias** - Judging decisions by results alone
+- **Choice-Supportive Bias** - Remembering chosen option as better
+
+### Self-Assessment & Confidence
+- **Overconfidence Bias** - Overestimating knowledge/abilities
+- **Optimism Bias** - Expecting positive outcomes
+- **False Consensus Effect** - Assuming others share our views
+- **Fundamental Attribution Error** - Blaming personality over situation
+
+### Group Dynamics & Social Influence
+- **Groupthink** - Consensus over critical evaluation
+- **Authority Bias (HiPPO)** - Deferring to authority figures
+- **Bandwagon Effect** - Following what others do
+- **Social Desirability Bias** - Answering to appear favorable
+
+### Change Resistance & Status Quo
+- **Status Quo Bias** - Preferring current state
+- **Loss Aversion** - Avoiding losses over acquiring gains
+- **Endowment Effect** - Overvaluing what we own/create
+- **Semmelweis Reflex** - Rejecting new contradicting information
+
+### Research & Testing Specific
+- **Hawthorne Effect** - Behavior change when observed
+- **Observer-Expectancy Effect** - Researchers influencing results
+- **Question-Order Bias** - Order affecting responses
+- **Leading Questions** - Suggesting preferred answers
+- **Sampling Bias** - Non-representative samples
+
+### Emotional & Contextual
+- **Negativity Bias** - Giving more weight to negative information
+- **Empathy Gap** - Underestimating emotional effects
+- **Implicit Bias** - Unconscious stereotypes
+- **Functional Fixedness** - Seeing only usual uses
+- **Decoy Effect** - Third option influencing choice
+
+## Sources
+
+The list above synthesizes findings from cognitive psychology and industry case studies, including:
+
+- User research guidelines (Maze.co, 2023)
+- Product management analyses (Condens.io, 2023)
+- Behavioral science literature on decision-making biases (TheDecisionLab.com, 2023; Monday.com, 2023)
+
+These sources provide detailed examples of how biases manifest in product development and strategies to avoid them.

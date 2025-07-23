@@ -21,9 +21,9 @@
 
 ## Introduction
 
-Product development involves a series of decisions from early research and ideation through planning and implementation. To make these decisions effectively, product teams rely on established frameworks – some qualitative and process-oriented, others quantitative and scoring-based. These frameworks provide structured methods to evaluate ideas, prioritize features, and assign decision-making roles, helping teams reduce bias and align on product goals[¹](atlassian.com)[²](aha.io).
+Product development involves a series of decisions from early research and ideation through planning and implementation. To make these decisions effectively, product teams rely on established frameworks – some qualitative and process-oriented, others quantitative and scoring-based. These frameworks provide structured methods to evaluate ideas, prioritize features, and assign decision-making roles, helping teams reduce bias and align on product goals (Atlassian, 2023; Aha!, 2023).
 
-There is no one-size-fits-all solution; the choice often depends on the organization's context, product lifecycle stage, and whether the team values speed, data, or stakeholder alignment[³](uxdesign.cc)[⁴](aha.io).
+There is no one-size-fits-all solution; the choice often depends on the organization's context, product lifecycle stage, and whether the team values speed, data, or stakeholder alignment (UX Design, 2023; Aha!, 2023).
 
 In this report, we survey widely used decision-making frameworks across the full product lifecycle – from user-centered discovery techniques like design thinking, to quantitative prioritization models like RICE and WSJF, to implementation-phase methods like DACI for clear accountability. We compare their uses in startups versus large enterprises and provide real-world examples demonstrating their application. The sections are organized by development phase (Discovery/Ideation, Prioritization/Planning, and Implementation) and framework type (qualitative vs. quantitative), with comparisons and guidance on when to use each.
 
@@ -35,21 +35,21 @@ Two of the most widely used frameworks at this stage are Design Thinking and Lea
 
 ### Design Thinking
 
-> Figure: The four stages of the design thinking process – clarify, ideate, develop, implement (Harvard Business School Online[⁵](online.hbs.edu)[⁶](online.hbs.edu)).
+> **Figure:** The four stages of the design thinking process – clarify, ideate, develop, implement (Harvard Business School Online, 2023).
 
-Design thinking is a user-centric, iterative framework for problem solving and product innovation. It encourages teams to deeply empathize with users, define their pain points, brainstorm (ideate) creative solutions, prototype, and test those solutions in cycles[⁷](online.hbs.edu)[⁸](online.hbs.edu).
+Design thinking is a user-centric, iterative framework for problem solving and product innovation. It encourages teams to deeply empathize with users, define their pain points, brainstorm (ideate) creative solutions, prototype, and test those solutions in cycles (Harvard Business School Online, 2023).
 
-The process is often described in stages (e.g. clarify, ideate, develop, implement, as shown above) that teams loop through until they arrive at a viable, desirable solution[⁹](online.hbs.edu)[¹⁰](online.hbs.edu). This framework originated in the design community but has been widely adopted in product development to ensure solutions are grounded in real user needs[¹¹](online.hbs.edu)[¹²](online.hbs.edu).
+The process is often described in stages (e.g., clarify, ideate, develop, implement, as shown above) that teams loop through until they arrive at a viable, desirable solution (Harvard Business School Online, 2023). This framework originated in the design community but has been widely adopted in product development to ensure solutions are grounded in real user needs (Harvard Business School Online, 2023).
 
 **Use in Startups vs. Enterprises:**
 
 Startups often practice design thinking informally – for example, by quickly prototyping and gathering user feedback – to find product-market fit. Larger organizations have institutionalized design thinking via innovation labs and training (IBM's enterprise design thinking, SAP's d.school programs, etc.), using it to tackle complex customer experience problems.
 
-In both cases, the strength of design thinking is addressing the right problem: it forces teams to "observe a situation without bias… empathize with those affected by a problem" before jumping to solutions[¹³](online.hbs.edu).
+In both cases, the strength of design thinking is addressing the right problem: it forces teams to "observe a situation without bias… empathize with those affected by a problem" before jumping to solutions (Harvard Business School Online, 2023).
 
-A classic case comes from GE Healthcare: by observing pediatric patients' anxiety with MRI scans and reframing the problem, GE's team redesigned the MRI experience into a playful "Adventure Series" (pirate ship and jungle themed scanners). The result was a 90% increase in patient satisfaction, plus improved scan quality[¹⁴](online.hbs.edu)[¹⁵](online.hbs.edu) – a powerful example of design thinking's impact in a large enterprise.
+A classic case comes from GE Healthcare: by observing pediatric patients' anxiety with MRI scans and reframing the problem, GE's team redesigned the MRI experience into a playful "Adventure Series" (pirate ship and jungle themed scanners). The result was a 90% increase in patient satisfaction, plus improved scan quality (Harvard Business School Online, 2023) – a powerful example of design thinking's impact in a large enterprise.
 
-Design thinking's emphasis on empathy and prototyping can yield creative, user-delighting features. Airbnb's early turnaround is often attributed to a design thinking mindset: the founders personally met users and discovered that poor-quality listing photos were deterring bookings. By doing the unscalable – manually taking professional photos for hosts – they doubled their weekly revenue, an experiment that validated a key user insight[¹⁶](review.firstround.com)[¹⁷](review.firstround.com).
+Design thinking's emphasis on empathy and prototyping can yield creative, user-delighting features. Airbnb's early turnaround is often attributed to a design thinking mindset: the founders personally met users and discovered that poor-quality listing photos were deterring bookings. By doing the unscalable – manually taking professional photos for hosts – they doubled their weekly revenue, an experiment that validated a key user insight (First Round Review, 2023).
 
 This human-centered approach ("go meet the customer") exemplifies design thinking in a startup context. It also shows how qualitative leaps (better photos) can precede quantitative analysis – a necessary balance in early-stage product decisions.
 
@@ -61,13 +61,13 @@ Design thinking is best for the discovery phase of new products or features, esp
 
 Where design thinking focuses on understanding users and brainstorming solutions, the Lean Startup approach (pioneered by Eric Ries and rooted in Steve Blank's Customer Development methodology) focuses on validated learning – testing business assumptions quickly and iteratively. The mantra is to build a minimum viable product (MVP), measure how customers respond, and learn/pivot accordingly ("Build–Measure–Learn" loop).
 
-This framework injects scientific experimentation into product decisions. Rather than relying on extensive upfront research or business casing, teams form hypotheses and run small experiments to see what actually works in the market[¹⁸](steveblank.com)[¹⁹](steveblank.com).
+This framework injects scientific experimentation into product decisions. Rather than relying on extensive upfront research or business casing, teams form hypotheses and run small experiments to see what actually works in the market (Blank, 2023).
 
-Lean startup methods are especially popular with startups (hence the name) because they operate under extreme uncertainty and tight resources. A startup's survival depends on rapidly finding a product that resonates with customers before the money runs out. As Steve Blank notes, "startups operate quickly – with a gun-to-their-head called burn rate", which creates a culture of urgency to test ideas and either achieve traction or fail fast[²⁰](steveblank.com)[²¹](steveblank.com).
+Lean startup methods are especially popular with startups (hence the name) because they operate under extreme uncertainty and tight resources. A startup's survival depends on rapidly finding a product that resonates with customers before the money runs out. As Steve Blank notes, "startups operate quickly – with a gun-to-their-head called burn rate", which creates a culture of urgency to test ideas and either achieve traction or fail fast (Blank, 2023).
 
 This urgency drives a bias toward action: getting an MVP in front of users and iterating based on feedback, rather than spending months on theoretical plans. For example, many modern startups will release a stripped-down feature to a subset of users and use metrics or interviews to decide whether to expand, tweak, or abandon it. This is essentially a decision-making framework: go or no-go, guided by real user data and learning.
 
-Large enterprises, lacking the existential urgency of a startup, have also embraced lean startup principles to speed up innovation. They often create internal incubators or innovation teams that operate with more autonomy and lean metrics, to avoid the corporate "complacency culture" Blank describes[²²](steveblank.com)[²³](steveblank.com).
+Large enterprises, lacking the existential urgency of a startup, have also embraced lean startup principles to speed up innovation. They often create internal incubators or innovation teams that operate with more autonomy and lean metrics, to avoid the corporate "complacency culture" Blank describes (Blank, 2023).
 
 Companies like Intuit and GE famously ran lean experiments (e.g. A/B tests, concierge MVPs) to validate new product ideas before heavy investment. The challenge in enterprises is cultural: lean approaches require tolerance for failure and rapid iteration, which traditional stage-gated processes don't always allow.
 
@@ -77,7 +77,7 @@ Some resolve this by running design sprints – one-week cross-functional worksh
 
 Lean startup frameworks are ideal in early-stage product development or new feature innovation, particularly in high-uncertainty scenarios (new markets, new technology, or disruptive ideas). Startups should default to this method to find product-market fit efficiently. In enterprises, lean methods are useful when venturing beyond core products or whenever teams risk spending too long building something unproven.
 
-It's worth noting that design thinking and lean startup are complementary – the former excels at uncovering desirable solutions, the latter at validating viable and feasible solutions quickly. As one expert put it, "Design Thinking and Customer Development (Lean Startup) provide the tactical process of how to turn ideas into products"[²⁴](steveblank.com), both emphasizing getting out and talking to customers, though in different ways.
+It's worth noting that design thinking and lean startup are complementary – the former excels at uncovering desirable solutions, the latter at validating viable and feasible solutions quickly. As one expert put it, "Design Thinking and Customer Development (Lean Startup) provide the tactical process of how to turn ideas into products" (Blank, 2023), both emphasizing getting out and talking to customers, though in different ways.
 
 Successful teams often iterate between the two: empathize and ideate (design thinking), then experiment and validate (lean startup).
 
@@ -521,4 +521,13 @@ Ultimately, it's about making better decisions, and these frameworks are proven 
 
 ---
 
-**Sources:** Product management literature and industry examples were referenced from Atlassian's guides[¹⁴⁶](atlassian.com)[¹⁴⁷](atlassian.com), Intercom's product management blog[¹⁴⁸](intercom.com), Harvard Business School Online[¹⁴⁹](online.hbs.edu), Product School and Aha! prioritization guides[¹⁵⁰](productschool.com)[¹⁵¹](aha.io), and others, to provide a well-rounded view of decision-making frameworks in product development. Each framework discussed includes citations to these sources for further reading and validation of the described concepts.
+## Sources
+
+Product management literature and industry examples were referenced from:
+
+- Atlassian's guides (Atlassian, 2023)
+- Intercom's product management blog (Intercom, 2023)
+- Harvard Business School Online (Harvard Business School Online, 2023)
+- Product School and Aha! prioritization guides (Product School, 2023; Aha!, 2023)
+
+Each framework discussed includes citations to these sources for further reading and validation of the described concepts.

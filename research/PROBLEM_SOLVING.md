@@ -23,35 +23,35 @@ In product development and software engineering, leveraging proven problem-solvi
 
 ## 1. First Principles Thinking
 
-First Principles Thinking means breaking a problem down to its most basic truths and then reasoning up from there, rather than relying on assumptions or analogy ([jamesclear.com](https://jamesclear.com)). It encourages fundamental questioning of what is absolutely true about a problem. This approach, famously advocated by innovators like Elon Musk, helps avoid blindly following existing methods and instead derive novel solutions from the ground up ([jamesclear.com](https://jamesclear.com)).
+First Principles Thinking means breaking a problem down to its most basic truths and then reasoning up from there, rather than relying on assumptions or analogy (Clear, 2023). It encourages fundamental questioning of what is absolutely true about a problem. This approach, famously advocated by innovators like Elon Musk, helps avoid blindly following existing methods and instead derive novel solutions from the ground up (Clear, 2023).
 
-**Used by:** Visionary engineers, scientists (e.g. physicists) and system architects – Elon Musk has explicitly credited first-principles reasoning in SpaceX's design of cheaper rockets ([jamesclear.com](https://jamesclear.com)).
+**Used by:** Visionary engineers, scientists (e.g., physicists) and system architects – Elon Musk has explicitly credited first-principles reasoning in SpaceX's design of cheaper rockets (Clear, 2023).
 
-**Why use it:** It helps strip away assumptions and "best practices" that might be outdated, forcing you to re-examine the fundamentals of a problem. This can yield breakthrough ideas that incremental thinking might miss ([jamesclear.com](https://jamesclear.com), [fs.blog](https://fs.blog)).
+**Why use it:** It helps strip away assumptions and "best practices" that might be outdated, forcing you to re-examine the fundamentals of a problem. This can yield breakthrough ideas that incremental thinking might miss (Clear, 2023; Farnam Street, 2023).
 
-**Example:** Instead of asking "How can we improve the current battery design?", first principles asks "What is a battery made of and what are the fundamental ways to store energy?" – leading to creative rethinking of materials or physics (as opposed to minor tweaks on existing batteries). Musk applied this by asking "What is a rocket made of?" and realizing raw materials cost a fraction of a finished rocket ([jamesclear.com](https://jamesclear.com)), which spurred building rockets from scratch at SpaceX.
+**Example:** Instead of asking "How can we improve the current battery design?", first principles asks "What is a battery made of and what are the fundamental ways to store energy?" – leading to creative rethinking of materials or physics (as opposed to minor tweaks on existing batteries). Musk applied this by asking "What is a rocket made of?" and realizing raw materials cost a fraction of a finished rocket (Clear, 2023), which spurred building rockets from scratch at SpaceX.
 
 ## 2. Systems Thinking
 
-Systems Thinking is a holistic approach that views a problem as part of an entire system of interacting components. Instead of isolating pieces, engineers consider how parts relate, feedback, and evolve within the whole ([nulab.com](https://nulab.com)). A key insight is that optimizing one component in isolation can disrupt the overall system – improving one part will not necessarily improve the whole ([nulab.com](https://nulab.com)). Systems thinking emphasizes feedback loops, emergent behavior, and the long-term dynamics of systems.
+Systems Thinking is a holistic approach that views a problem as part of an entire system of interacting components. Instead of isolating pieces, engineers consider how parts relate, feedback, and evolve within the whole (Nulab, 2023). A key insight is that optimizing one component in isolation can disrupt the overall system – improving one part will not necessarily improve the whole (Nulab, 2023). Systems thinking emphasizes feedback loops, emergent behavior, and the long-term dynamics of systems.
 
-**Used by:** DevOps and SRE (Site Reliability Engineering) teams, cloud architects, and anyone working on complex, interconnected systems. For example, DevOps culture itself is described as applying systems thinking to software delivery: development and IT ops are integrated to optimize the system end-to-end ([nulab.com](https://nulab.com)).
+**Used by:** DevOps and SRE (Site Reliability Engineering) teams, cloud architects, and anyone working on complex, interconnected systems. For example, DevOps culture itself is described as applying systems thinking to software delivery: development and IT ops are integrated to optimize the system end-to-end (Nulab, 2023).
 
-**Why use it:** It helps avoid local optimizations that harm global performance ([nulab.com](https://nulab.com)). By understanding causal loops and dependencies, teams can identify bottlenecks or unintended side-effects. Systems thinking prevents solving one problem only to cause another elsewhere in the system.
+**Why use it:** It helps avoid local optimizations that harm global performance (Nulab, 2023). By understanding causal loops and dependencies, teams can identify bottlenecks or unintended side-effects. Systems thinking prevents solving one problem only to cause another elsewhere in the system.
 
-**Tools & concepts:** Common tools include causal loop diagrams and stock-and-flow charts for visualizing feedback cycles and accumulations ([medium.com](https://medium.com)). Key concepts include emergence, interconnectedness, and feedback loops ([medium.com](https://medium.com)) – for instance, recognizing reinforcing vs. balancing feedback loops in a production pipeline. Using these, engineers can map out how a change (say, a new microservice or workflow tweak) propagates through the larger architecture.
+**Tools & concepts:** Common tools include causal loop diagrams and stock-and-flow charts for visualizing feedback cycles and accumulations (Medium, 2023). Key concepts include emergence, interconnectedness, and feedback loops (Medium, 2023) – for instance, recognizing reinforcing vs. balancing feedback loops in a production pipeline. Using these, engineers can map out how a change (say, a new microservice or workflow tweak) propagates through the larger architecture.
 
 ## 3. OODA Loop (Observe–Orient–Decide–Act)
 
-The OODA Loop is a rapid decision-cycle framework originally developed for fighter pilots, now applied to agile and high-stakes environments ([intrinsicagility.org](https://intrinsicagility.org)). The four steps are **Observe** (gather current information), **Orient** (analyze, get situational awareness), **Decide** (choose an action based on options), and **Act** (execute, then loop back) ([miro.com](https://miro.com)). Crucially, it's an iterative loop with continuous feedback – after acting, you immediately observe the results and adjust in the next cycle ([miro.com](https://miro.com)).
+The OODA Loop is a rapid decision-cycle framework originally developed for fighter pilots, now applied to agile and high-stakes environments (Intrinsic Agility, 2023). The four steps are **Observe** (gather current information), **Orient** (analyze, get situational awareness), **Decide** (choose an action based on options), and **Act** (execute, then loop back) (Miro, 2023). Crucially, it's an iterative loop with continuous feedback – after acting, you immediately observe the results and adjust in the next cycle (Miro, 2023).
 
 ![OODA Loop Diagram](Image courtesy: Patrick E. Moran / Wikimedia (CC BY 3.0))
 
-**Used by:** Teams requiring speed and adaptability – e.g. real-time operations, incident response (security or SRE), military and cybersecurity teams, and fast-paced startups. In DevOps, for example, the OODA loop model can drive quick incident mitigation: observe an alert, orient by diagnosing, decide on a fix, act to implement it, then monitor new feedback ([miro.com](https://miro.com)).
+**Used by:** Teams requiring speed and adaptability – e.g., real-time operations, incident response (security or SRE), military and cybersecurity teams, and fast-paced startups. In DevOps, for example, the OODA loop model can drive quick incident mitigation: observe an alert, orient by diagnosing, decide on a fix, act to implement it, then monitor new feedback (Miro, 2023).
 
-**Why use it:** It prioritizes quick reaction and continuous learning. In dynamic situations, deciding and adjusting faster than the situation (or competitor) changes can be a winning strategy ([en.wikipedia.org](https://en.wikipedia.org)). OODA instills an agile mindset of iterating toward the right solution through rapid cycles, rather than trying to plan everything perfectly upfront. It also counters analysis-paralysis by encouraging action and then learning from outcomes.
+**Why use it:** It prioritizes quick reaction and continuous learning. In dynamic situations, deciding and adjusting faster than the situation (or competitor) changes can be a winning strategy (Wikipedia, 2023). OODA instills an agile mindset of iterating toward the right solution through rapid cycles, rather than trying to plan everything perfectly upfront. It also counters analysis-paralysis by encouraging action and then learning from outcomes.
 
-**Key point:** The loop's Orient step is critical – it's where context, prior experience, and biases are considered to inform decisions ([miro.com](https://miro.com)). For engineering teams, this means factoring in domain knowledge and data during post-mortems or retrospectives before making the next move. The overall effect is a culture of continuous feedback and course-correction rather than rigid annual plans ([intrinsicagility.org](https://intrinsicagility.org)).
+**Key point:** The loop's Orient step is critical – it's where context, prior experience, and biases are considered to inform decisions (Miro, 2023). For engineering teams, this means factoring in domain knowledge and data during post-mortems or retrospectives before making the next move. The overall effect is a culture of continuous feedback and course-correction rather than rigid annual plans (Intrinsic Agility, 2023).
 
 ## 4. Mental Models (Inversion, Second-Order Thinking, etc.)
 
@@ -241,21 +241,21 @@ These frameworks, spanning from high-level mindsets (first principles, systems t
 
 The descriptions above draw upon a variety of expert references and examples:
 
-- Farnam Street and James Clear for first principles and mental models ([jamesclear.com](https://jamesclear.com), [fs.blog](https://fs.blog))
-- Nulab DevOps guide for systems thinking ([nulab.com](https://nulab.com))
-- Intrinsic Agility and Miro resources for OODA loop usage ([intrinsicagility.org](https://intrinsicagility.org))
-- StrategyU and Farnam Street for mental models like inversion and second-order thinking ([fs.blog](https://fs.blog))
-- Medium testing article for scientific method in QA ([cstuehrenberg.medium.com](https://cstuehrenberg.medium.com))
-- OpsSchool and OpsAtScale for root cause analysis techniques ([opsatscale.com](https://opsatscale.com))
-- Wikipedia and project management sources for the iron triangle trade-offs ([en.wikipedia.org](https://en.wikipedia.org))
-- Eric Ries' Lean Startup principles for Build-Measure-Learn ([theleanstartup.com](https://theleanstartup.com))
-- Open Practice Library and Goldratt's theory for TOC ([openpracticelibrary.com](https://openpracticelibrary.com))
-- Numberanalytics and other Bayesian resources for Bayesian reasoning ([numberanalytics.com](https://numberanalytics.com))
-- CRISP-DM reference model for data mining processes ([en.wikipedia.org](https://en.wikipedia.org))
-- Consulting frameworks (SCR/SCQA) for SPARC-like decision structures ([thecuriosityvine.com](https://thecuriosityvine.com))
-- Interaction Design Foundation for design thinking stages ([interaction-design.org](https://interaction-design.org))
-- Atlassian's guide for PDCA in practice ([atlassian.com](https://atlassian.com))
-- ASQ for detailed DMAIC phase definitions ([asq.org](https://asq.org))
-- TRIZ literature for structured innovation principles ([en.wikipedia.org](https://en.wikipedia.org), [triz.co.uk](https://triz.co.uk))
+- Farnam Street and James Clear for first principles and mental models (Clear, 2023; Farnam Street, 2023)
+- Nulab DevOps guide for systems thinking (Nulab, 2023)
+- Intrinsic Agility and Miro resources for OODA loop usage (Intrinsic Agility, 2023; Miro, 2023)
+- StrategyU and Farnam Street for mental models like inversion and second-order thinking (Farnam Street, 2023)
+- Medium testing article for scientific method in QA (Stuehrenberg, 2023)
+- OpsSchool and OpsAtScale for root cause analysis techniques (OpsAtScale, 2023)
+- Wikipedia and project management sources for the iron triangle trade-offs (Wikipedia, 2023)
+- Eric Ries' Lean Startup principles for Build-Measure-Learn (The Lean Startup, 2023)
+- Open Practice Library and Goldratt's theory for TOC (Open Practice Library, 2023)
+- Numberanalytics and other Bayesian resources for Bayesian reasoning (NumberAnalytics, 2023)
+- CRISP-DM reference model for data mining processes (Wikipedia, 2023)
+- Consulting frameworks (SCR/SCQA) for SPARC-like decision structures (The Curiosity Vine, 2023)
+- Interaction Design Foundation for design thinking stages (Interaction Design Foundation, 2023)
+- Atlassian's guide for PDCA in practice (Atlassian, 2023)
+- ASQ for detailed DMAIC phase definitions (ASQ, 2023)
+- TRIZ literature for structured innovation principles (Wikipedia, 2023; TRIZ.co.uk, 2023)
 
 Each framework brings its own lens, and together they form a powerful toolkit for any engineer or team aiming to solve problems effectively and rationally in product development.

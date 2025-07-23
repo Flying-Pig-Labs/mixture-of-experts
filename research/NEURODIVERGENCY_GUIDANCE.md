@@ -14,19 +14,19 @@
 
 ## Introduction: Why Think Differently?
 
-Encouraging diverse and unconventional thinking ("atypical" approaches) can help rewire problem-solving in teams ([blog.blueoceanbrain.com](https://blog.blueoceanbrain.com), [ceoplaybook.co](https://ceoplaybook.co)).
+Encouraging diverse and unconventional thinking ("atypical" approaches) can help rewire problem-solving in teams (Blue Ocean Brain, 2023; CEO Playbook, 2023).
 
-Innovation often requires thinking differently from the standard approach. Teams that rely on the same familiar thought patterns can get trapped by groupthink or "functional fixedness," struggling to see novel solutions ([blog.blueoceanbrain.com](https://blog.blueoceanbrain.com)). Research indicates that cognitively diverse teams – those bringing different thinking styles and perspectives – achieve more innovative results and even solve problems faster than homogenous teams ([blog.blueoceanbrain.com](https://blog.blueoceanbrain.com)).
+Innovation often requires thinking differently from the standard approach. Teams that rely on the same familiar thought patterns can get trapped by groupthink or "functional fixedness," struggling to see novel solutions (Blue Ocean Brain, 2023). Research indicates that cognitively diverse teams – those bringing different thinking styles and perspectives – achieve more innovative results and even solve problems faster than homogenous teams (Blue Ocean Brain, 2023).
 
 In other words, tackling challenges in a new way can literally speed up breakthroughs. However, "thinking outside the box" doesn't mean abandoning logic entirely or bringing in unrelated disciplines (as cross-disciplinary approaches do). Instead, it involves applying atypical, creative thought techniques within your field to jar the team out of its comfort zone.
 
-As Edward de Bono famously observed, "90% of error in thinking is due to error in perception" – meaning if we change how we perceive a problem, we open the door to new ideas ([ceoplaybook.co](https://ceoplaybook.co)).
+As Edward de Bono famously observed, "90% of error in thinking is due to error in perception" – meaning if we change how we perceive a problem, we open the door to new ideas (CEO Playbook, 2023).
 
 The following guidance introduces several unconventional techniques that an engineering or "agent" team can integrate into their workflow. These methods are specific and practical, and each is meant to shake up the team's thinking while still being applicable to real use cases.
 
 ## Challenging Core Assumptions
 
-One of the simplest ways to spur atypical thinking is to question the basic assumptions and "rules" the team has taken for granted. In fast-paced projects, teams often assume certain constraints or default solutions without reconsidering them. The Challenge technique (from de Bono's lateral thinking) explicitly asks "Why must things be this way?" and "What if we did it another way?" ([ceoplaybook.co](https://ceoplaybook.co)).
+One of the simplest ways to spur atypical thinking is to question the basic assumptions and "rules" the team has taken for granted. In fast-paced projects, teams often assume certain constraints or default solutions without reconsidering them. The Challenge technique (from de Bono's lateral thinking) explicitly asks "Why must things be this way?" and "What if we did it another way?" (CEO Playbook, 2023).
 
 By temporarily suspending the belief that the current approach is the only or best way, you invite creative alternatives. For example, identify a key assumption in your project:
 
@@ -40,36 +40,37 @@ Then challenge that assumption:
 
 This isn't to say you will adopt slower responses or remove menus, but the act of questioning may reveal new angles (perhaps responses could be pre-cached to appear instant, or a novel UI could replace menus).
 
-Edward de Bono gives a dramatic real-world example: oil companies assumed oil wells must be drilled straight down; he challenged this, asking "why not drill horizontally?" – an idea initially dismissed as impossible. Yet using a new technique to bend the drill, horizontal drilling became reality and yielded 3-6 times more oil, and is now an industry-standard practice ([ceoplaybook.co](https://ceoplaybook.co)).
+Edward de Bono gives a dramatic real-world example: oil companies assumed oil wells must be drilled straight down; he challenged this, asking "why not drill horizontally?" – an idea initially dismissed as impossible. Yet using a new technique to bend the drill, horizontal drilling became reality and yielded 3-6 times more oil, and is now an industry-standard practice (CEO Playbook, 2023).
 
 The lesson is that challenging a "sacred" practice or design can uncover breakthrough improvements. To integrate this into your team's process, designate times where team members play devil's advocate to every ingrained idea. Encourage asking "What if we stopped doing X entirely?".
 
-This approach is also echoed in modern innovation frameworks: for instance, Liberating Structures workshops include a "TRIZ" exercise (no relation to classic TRIZ, described later) where participants list all the things the organization does that prevent solving the problem, and then identify which of those activities to stop ([sessionlab.com](https://sessionlab.com)). This creates a safe space to challenge the status quo – even questioning practices long considered untouchable – and often leads to "heretical" ideas that can clear the way for progress ([sessionlab.com](https://sessionlab.com)).
+This approach is also echoed in modern innovation frameworks: for instance, Liberating Structures workshops include a "TRIZ" exercise (no relation to classic TRIZ, described later) where participants list all the things the organization does that prevent solving the problem, and then identify which of those activities to stop (SessionLab, 2023). This creates a safe space to challenge the status quo – even questioning practices long considered untouchable – and often leads to "heretical" ideas that can clear the way for progress (SessionLab, 2023).
 
 By systematically doubting and challenging your normal assumptions, you make your team more receptive to radically different solutions.
 
 ## Provocations and Absurd Ideas as Ideation Tools
 
-Another powerful method for jolting a team's perspective is using provocation – deliberately introducing ideas that are absurd, "wrong," or impossible, in order to provoke fresh thinking. Edward de Bono calls this the Provocation technique: you make a deliberately outrageous statement or idea related to the problem and then see what insights it leads to ([ceoplaybook.co](https://ceoplaybook.co)).
+Another powerful method for jolting a team's perspective is using provocation – deliberately introducing ideas that are absurd, "wrong," or impossible, in order to provoke fresh thinking. Edward de Bono calls this the Provocation technique: you make a deliberately outrageous statement or idea related to the problem and then see what insights it leads to (CEO Playbook, 2023).
 
 The key here is not to implement the crazy idea as-is, but to let it break your habitual thought patterns. By considering an absurd alternative, the team may latch onto a useful element hidden in that absurdity.
 
 There are formal ways to generate provocations, such as:
+
 - **Wishful thinking**
 - **Exaggeration**
 - **Random reversal**
 - **Escape**
 - **Distortion**
 
-([ceoplaybook.co](https://ceoplaybook.co))
+(CEO Playbook, 2023)
 
 For instance, if your agent software must operate under certain hardware limits, exaggerate that constraint: "What if we only had 1% of the memory available?" Conversely, wishful thinking means imagining an ideal scenario: "In a perfect world, how would this agent function?"
 
 By pushing ideas to extremes – impossibly low resources, or conversely unlimited capabilities – you force the team to consider solutions at the fringes of possibility. These thought experiments can yield very concrete innovations. (For example, imagining an agent with infinite knowledge might inspire a clever way to dynamically fetch data on demand.)
 
-Crucially, follow a provocation with "movement" – i.e. extract something workable from it ([ceoplaybook.co](https://ceoplaybook.co)). De Bono suggests writing down even silly solutions because the act of enumerating them can spark a real solution ([ceoplaybook.co](https://ceoplaybook.co)).
+Crucially, follow a provocation with "movement" – i.e., extract something workable from it (CEO Playbook, 2023). De Bono suggests writing down even silly solutions because the act of enumerating them can spark a real solution (CEO Playbook, 2023).
 
-A famous example of provocation in action: faced with factories polluting a river, de Bono provocatively said, "Put the factory downstream of itself." On its face this is nonsense – a factory can't be both upstream and downstream. But exploring that "impossible" idea led to a real policy: require factories to take in water below their own discharge, forcing them to "drink their own medicine." This policy (making polluters directly consume their output) was later enacted in law across many countries ([ceoplaybook.co](https://ceoplaybook.co)).
+A famous example of provocation in action: faced with factories polluting a river, de Bono provocatively said, "Put the factory downstream of itself." On its face this is nonsense – a factory can't be both upstream and downstream. But exploring that "impossible" idea led to a real policy: require factories to take in water below their own discharge, forcing them to "drink their own medicine." This policy (making polluters directly consume their output) was later enacted in law across many countries (CEO Playbook, 2023).
 
 The absurd provocation (being downstream of yourself) was the catalyst for an innovative solution (legislating intake pipes below output pipes).
 
@@ -285,12 +286,12 @@ As one innovation coach put it, when a good process provides guardrails and a cl
 
 ## References and Further Reading
 
-- **Edward de Bono's Lateral Thinking techniques** (provocations, Six Hats) – see *The Use of Lateral Thinking* and related literature ([ceoplaybook.co](https://ceoplaybook.co), [sessionlab.com](https://sessionlab.com))
+- **Edward de Bono's Lateral Thinking techniques** (provocations, Six Hats) – see *The Use of Lateral Thinking* and related literature (CEO Playbook, 2023; SessionLab, 2023)
 
-- **TRIZ methodology** for inventive problem solving – numerous resources outline its 40 principles and contradiction-solving strategies ([behavioralscientist.org](https://behavioralscientist.org))
+- **TRIZ methodology** for inventive problem solving – numerous resources outline its 40 principles and contradiction-solving strategies (Behavioral Scientist, 2023)
 
-- **Liberating Structures** facilitation methods – e.g., "Making Space with TRIZ" exercise for challenging conventional practices ([sessionlab.com](https://sessionlab.com))
+- **Liberating Structures** facilitation methods – e.g., "Making Space with TRIZ" exercise for challenging conventional practices (SessionLab, 2023)
 
-- **Research on cognitive diversity and creativity** – e.g., Alison Reynolds & David Lewis (HBR 2017) on diversity accelerating problem-solving ([blog.blueoceanbrain.com](https://blog.blueoceanbrain.com)), and reports on how diverse thinking styles drive innovation ([blog.blueoceanbrain.com](https://blog.blueoceanbrain.com))
+- **Research on cognitive diversity and creativity** – e.g., Alison Reynolds & David Lewis (HBR 2017) on diversity accelerating problem-solving (Blue Ocean Brain, 2023), and reports on how diverse thinking styles drive innovation (Blue Ocean Brain, 2023)
 
-- **Brainstorming technique compilations** for more ideas – SessionLab's 40 techniques ([sessionlab.com](https://sessionlab.com)), Asana's brainstorming guide ([asana.com](https://asana.com)), etc., which include methods like reverse brainstorming, role-storming, SCAMPER, and more
+- **Brainstorming technique compilations** for more ideas – SessionLab's 40 techniques (SessionLab, 2023), Asana's brainstorming guide (Asana, 2023), etc., which include methods like reverse brainstorming, role-storming, SCAMPER, and more
