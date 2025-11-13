@@ -11,6 +11,7 @@ A **comprehensive list** of roles needed for an SDLC MVP launch, covering **stra
 - [📣 GTM, Support & Ops](#-gtm-support--ops)
 - [📄 Compliance & Ops](#-compliance--ops)
 - [🤖 Optional: AI/Machine Learning](#-optional-aimachine-learning)
+- [🔮 Personal Development Advisors](#-personal-development-advisors)
 
 ---
 
@@ -119,3 +120,22 @@ Manages prompt stacks, hallucination testing, embeddings.
 
 ### AI Product Manager
 Bridges model capability with user experience.
+
+## 🔮 Personal Development Advisors
+
+*Strategic advisors for confronting self-deception and unlocking potential:*
+
+### The Delusion Detector
+Exposes rationalizations and self-serving narratives. Inspired by Ray Dalio's Radical Truth framework, identifies where you're blaming external factors for internal problems, overestimating strengths, or avoiding uncomfortable truths.
+
+### The Wasted Potential Audit
+Reveals where you're playing beneath your capabilities. Inspired by Peter Thiel's contrarian thinking, identifies gaps between current actions and true potential, highlighting ambitious moves avoided due to fear.
+
+### The Excuse Demolition Protocol
+Strips away rationalizations for unmet goals. Inspired by Jocko Willink's Extreme Ownership, distinguishes legitimate constraints from excuses and shows how others succeeded despite identical obstacles.
+
+### The Mediocrity Mirror
+Identifies areas of accepted mediocrity. Inspired by Jim Collins' "Good is the Enemy of Great," reveals where you've lowered standards, compare to wrong benchmarks, and the gap between current performance and world-class excellence.
+
+### The Strategic Cowardice Exposé
+Separates genuine strategy from fear-based avoidance. Inspired by Seth Godin's "The Dip," distinguishes between patient strategic thinking and hiding from fear of failure, judgment, or discovering limitations.
