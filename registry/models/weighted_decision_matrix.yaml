@@ -1,0 +1,399 @@
+# Weighted Decision Matrix
+# A structured approach to multi-criteria decision making
+
+id: weighted_decision_matrix
+name: Weighted Decision Matrix
+category: multi_criteria_decision
+tags:
+  - comparison
+  - scoring
+  - multi_criteria
+  - structured_analysis
+  - vendor_selection
+  - prioritization
+
+# Description
+short_description: "Score and compare options across multiple weighted criteria"
+
+long_description: |
+  A Weighted Decision Matrix (also called Weighted Scoring Model or Decision Matrix
+  Analysis) is a systematic approach to comparing multiple options across several
+  criteria with explicit importance weightings.
+
+  This method is particularly valuable when:
+  - You have 2+ options to choose from
+  - Multiple factors matter for the decision
+  - Different factors have different levels of importance
+  - You want an objective, defensible decision process
+
+  The framework works by:
+  1. Listing all viable options
+  2. Identifying evaluation criteria
+  3. Assigning importance weights to criteria (sum to 1.0)
+  4. Scoring each option on each criterion (typically 1-10)
+  5. Calculating weighted scores (score × weight)
+  6. Summing to get total score per option
+
+  Benefits:
+  - Makes implicit trade-offs explicit
+  - Reduces bias through structured evaluation
+  - Easy to communicate and justify decisions
+  - Supports sensitivity analysis
+  - Collaborative (team can debate weights and scores)
+
+  Limitations:
+  - Can create false precision (8 vs 7.5?)
+  - Assumes linear relationships between criteria
+  - May miss qualitative factors that don't score well
+  - Weights and scores are subjective despite numeric format
+
+# When to use
+best_for:
+  - Vendor/supplier selection
+  - Hiring decisions (comparing candidates)
+  - Technology choices (build vs buy, framework selection)
+  - Feature prioritization
+  - Location selection (office, market expansion)
+  - Investment/allocation decisions
+
+avoid_when:
+  - Only one criterion matters (just optimize that)
+  - Options are not comparable (apples to oranges)
+  - Need rapid decision (too time-consuming)
+  - Criteria cannot be meaningfully scored
+  - Decision is heavily qualitative/emotional
+
+# Difficulty and time
+complexity: simple
+estimated_time_minutes: 30
+expertise_required: none
+
+# Required inputs
+required_inputs:
+  - id: options
+    prompt: "List all the options you're deciding between (comma-separated)"
+    type: list
+    placeholder: "Option A, Option B, Option C"
+    guidance: |
+      Include all viable alternatives. Typically 2-8 options.
+      If you have >10 options, consider pre-filtering first.
+    validation:
+      min_items: 2
+      max_items: 10
+
+  - id: criteria
+    prompt: "What criteria matter for this decision? (comma-separated)"
+    type: list
+    placeholder: "Cost, Quality, Ease of use, Support, Scalability"
+    guidance: |
+      List factors that differentiate the options.
+      Aim for 3-7 criteria (too few = oversimplified, too many = analysis paralysis).
+      Make criteria specific and measurable where possible.
+    validation:
+      min_items: 2
+      max_items: 10
+
+  - id: criteria_weights
+    prompt: "How would you weight these criteria by importance? (decimal values that sum to 1.0)"
+    type: weights
+    placeholder: "Cost=0.25, Quality=0.35, Ease of use=0.15, Support=0.15, Scalability=0.10"
+    guidance: |
+      Assign importance weights to each criterion.
+      Higher weight = more important to your decision.
+      Must sum to 1.0 (or 100%).
+
+      Tips:
+      - Start by ranking criteria, then assign weights
+      - Consider: "If I could only optimize ONE criterion, which would it be?"
+      - Check: Does the weight distribution reflect your true priorities?
+    validation:
+      sum_to: 1.0
+      all_positive: true
+      depends_on: criteria
+
+  - id: scores
+    prompt: "Score each option on each criterion (1-10 scale, where 10 is best)"
+    type: multiline
+    placeholder: |
+      Option A: Cost=8, Quality=7, Ease of use=9, Support=6, Scalability=5
+      Option B: Cost=6, Quality=9, Ease of use=8, Support=9, Scalability=8
+      Option C: Cost=9, Quality=6, Ease of use=6, Support=7, Scalability=7
+    guidance: |
+      For each option, score it on each criterion using 1-10 scale:
+      - 1-3: Poor/weak on this criterion
+      - 4-6: Adequate/moderate
+      - 7-8: Good/strong
+      - 9-10: Excellent/exceptional
+
+      Be honest and specific. If you don't have data, note assumptions.
+    validation:
+      min_length: 20
+
+# Optional inputs
+optional_inputs:
+  - id: constraints
+    prompt: "Are there any hard constraints that would disqualify an option? (Optional)"
+    type: multiline
+    placeholder: |
+      Option A: Must integrate with Salesforce (disqualifies if not possible)
+      Budget: Hard cap at $50K/year (disqualifies any option over this)
+    guidance: "List dealbreakers that would eliminate options before scoring"
+    validation:
+      optional: true
+
+  - id: confidence
+    prompt: "How confident are you in your scores? (Optional)"
+    type: text
+    placeholder: "High confidence on cost (real quotes), low confidence on scalability (limited testing)"
+    guidance: "Note which scores are based on data vs assumptions"
+    validation:
+      optional: true
+
+# Application template
+application_template: |
+  You are applying the Weighted Decision Matrix framework to help compare options.
+
+  FRAMEWORK: Weighted Decision Matrix
+  METHOD: Score options across weighted criteria, calculate total weighted scores
+
+  PROBLEM: {{ problem_description }}
+
+  USER INPUTS:
+  Options: {{ answers.options | join(', ') }}
+  Criteria: {{ answers.criteria | join(', ') }}
+  Weights: {{ answers.criteria_weights }}
+  Scores: {{ answers.scores }}
+
+  {% if answers.constraints %}
+  Constraints: {{ answers.constraints }}
+  {% endif %}
+
+  {% if answers.confidence %}
+  Confidence Notes: {{ answers.confidence }}
+  {% endif %}
+
+  TASK:
+  Provide a comprehensive weighted decision matrix analysis:
+
+  1. DECISION MATRIX TABLE
+     Create a clear table showing:
+     - Rows: Each option
+     - Columns: Each criterion with weight in header
+     - Cells: Score (weighted score)
+     - Final column: Total weighted score
+     - Highlight the winning option
+
+     Example format:
+     | Option   | Cost (25%) | Quality (35%) | Ease (15%) | Support (15%) | Scale (10%) | TOTAL |
+     |----------|------------|---------------|------------|---------------|-------------|-------|
+     | Option A | 8 (2.00)   | 7 (2.45)      | 9 (1.35)   | 6 (0.90)      | 5 (0.50)    | 7.20  |
+     | Option B | 6 (1.50)   | 9 (3.15)      | 8 (1.20)   | 9 (1.35)      | 8 (0.80)    | 8.00 ⭐|
+     | Option C | 9 (2.25)   | 6 (2.10)      | 6 (0.90)   | 7 (1.05)      | 7 (0.70)    | 7.00  |
+
+  2. ANALYSIS SUMMARY
+     - Winner: Which option has the highest total score?
+     - Margin: By how much? Is it significant or close?
+     - Strengths: What does the winner excel at?
+     - Weaknesses: Where does the winner fall short?
+     - Runner-up: Second place and why it's close/far
+
+  3. CRITERION-BY-CRITERION INSIGHTS
+     For each criterion, analyze:
+     - Which option scores highest?
+     - How much variation is there? (e.g., all similar vs clear winner)
+     - Does the weight reflect true importance? (sensitivity check)
+     - Any surprises in the scores?
+
+  4. SENSITIVITY ANALYSIS
+     Test key assumptions:
+     - What if we weight [highest-weighted criterion] less? Does winner change?
+     - What if we weight [lowest-weighted criterion] more?
+     - Close calls: If scores are within 10% of each other, note it's sensitive
+     - Robustness: Is the winner clear or fragile to weight changes?
+
+     Provide 2-3 "what-if" scenarios that would flip the decision.
+
+  5. SCORE QUALITY CHECK
+     Assess the scoring quality:
+     - Are scores based on data or assumptions?
+     - Are there criteria where all options score similarly? (may not be differentiating)
+     - Are there criteria with extreme score variance? (may be decisive)
+     - Bias check: Is there evidence of halo effect or confirmation bias?
+
+  6. QUALITATIVE FACTORS
+     Beyond the numbers:
+     - What important factors aren't captured in the criteria?
+     - Are there intangibles (trust, cultural fit, future potential)?
+     - Second-order effects: Consequences of this choice 6-12 months out?
+     - Optionality: Does one option preserve more flexibility?
+
+  7. RECOMMENDATION
+     - Recommended option: Based on highest weighted score
+     - Confidence: X% (consider score margin, data quality, sensitivity)
+     - Conditions: "Choose Option B IF..." (state assumptions)
+     - Decision clarity: Clear winner vs. too close to call
+     - Next steps: What validation would increase confidence?
+
+  8. IMPLEMENTATION CONSIDERATIONS
+     For the recommended option:
+     - What are the immediate next steps?
+     - What risks need mitigation?
+     - What's the expected timeline?
+     - Who needs to be involved?
+
+  FORMAT REQUIREMENTS:
+  - Use markdown tables for the matrix
+  - Show both raw scores and weighted scores
+  - Highlight the winner clearly
+  - Provide actionable insights, not just numbers
+  - Note assumptions and confidence levels
+  - Include sensitivity analysis
+  - Be honest about limitations of the scoring
+
+# Examples
+examples:
+  - name: "Vendor Selection for CRM System"
+    problem: "Choose a CRM vendor for our 50-person sales team"
+    answers:
+      options:
+        - Salesforce
+        - HubSpot
+        - Pipedrive
+      criteria:
+        - Cost
+        - Features
+        - Ease of use
+        - Integration
+        - Support
+      criteria_weights: "Cost=0.20, Features=0.30, Ease of use=0.25, Integration=0.15, Support=0.10"
+      scores: |
+        Salesforce: Cost=4, Features=10, Ease of use=6, Integration=9, Support=8
+        HubSpot: Cost=7, Features=8, Ease of use=9, Integration=8, Support=9
+        Pipedrive: Cost=9, Features=6, Ease of use=8, Integration=6, Support=7
+      constraints: "Must integrate with our existing MarTech stack (Salesforce and HubSpot both do)"
+    outcome: |
+      Matrix Analysis:
+      - HubSpot: 8.15 weighted score (winner)
+      - Salesforce: 7.45
+      - Pipedrive: 7.35
+
+      Key insight: Despite Salesforce having superior features (10/10), HubSpot wins
+      on the combination of ease of use (highest weight after features) and better cost.
+
+      Sensitivity: If we increase Features weight to >40%, Salesforce wins.
+      Recommendation: HubSpot for current needs, but reassess if we need enterprise
+      features (forecasting, advanced automation) in next 12 months.
+
+  - name: "Hiring: Choose between 3 Senior Engineer Candidates"
+    problem: "Hire senior backend engineer from 3 finalists"
+    answers:
+      options:
+        - Candidate A (internal)
+        - Candidate B (external, scale-up background)
+        - Candidate C (external, Big Tech background)
+      criteria:
+        - Technical skill
+        - Culture fit
+        - Ramp time
+        - Cost
+        - Leadership potential
+      criteria_weights: "Technical skill=0.30, Culture fit=0.25, Ramp time=0.20, Cost=0.10, Leadership potential=0.15"
+      scores: |
+        Candidate A: Technical=7, Culture=9, Ramp=10, Cost=8, Leadership=6
+        Candidate B: Technical=9, Culture=8, Ramp=7, Cost=7, Leadership=9
+        Candidate C: Technical=10, Culture=6, Ramp=5, Cost=4, Leadership=7
+    outcome: |
+      Matrix Analysis:
+      - Candidate A: 7.95 (winner by small margin)
+      - Candidate B: 8.20 (actual winner)
+      - Candidate C: 7.05
+
+      Surprise: Internal candidate (A) scored high due to culture fit and zero ramp time,
+      but Candidate B edges out with stronger technical skills and leadership potential.
+
+      Sensitivity: Decision is VERY close (within 0.25 points). Small changes in
+      scoring could flip it. Recommended: Do trial project with both A and B to
+      gather more data before final decision.
+
+      Qualitative note: Candidate C from Big Tech may have culture adaptation issues
+      (scored 6/10) - our startup pace is very different. Proceed with caution.
+
+  - name: "Product Roadmap: Feature Prioritization"
+    problem: "Choose which 2 features to build in Q2 from 5 candidates"
+    answers:
+      options:
+        - Advanced analytics dashboard
+        - Mobile app (iOS)
+        - API for integrations
+        - Improved onboarding
+        - AI-powered recommendations
+      criteria:
+        - User value
+        - Business impact
+        - Development effort
+        - Technical risk
+        - Strategic fit
+      criteria_weights: "User value=0.25, Business impact=0.30, Development effort=0.20, Technical risk=0.10, Strategic fit=0.15"
+      scores: |
+        Advanced analytics: User value=7, Business impact=6, Dev effort=3, Tech risk=6, Strategic fit=8
+        Mobile app: User value=9, Business impact=9, Dev effort=2, Tech risk=7, Strategic fit=9
+        API integrations: User value=8, Business impact=7, Dev effort=7, Tech risk=8, Strategic fit=7
+        Improved onboarding: User value=8, Business impact=8, Dev effort=9, Tech risk=9, Strategic fit=6
+        AI recommendations: User value=7, Business impact=7, Dev effort=3, Tech risk=4, Strategic fit=8
+      constraints: "Team capacity = 20 story points. Onboarding=3pts, API=5pts, Mobile=13pts, Analytics=8pts, AI=10pts"
+    outcome: |
+      Matrix Analysis (highest to lowest):
+      1. Improved onboarding: 7.85 ⭐
+      2. Mobile app: 7.65 ⭐
+      3. API integrations: 7.30
+      4. AI recommendations: 6.70
+      5. Advanced analytics: 6.15
+
+      Capacity constraint analysis:
+      - Onboarding (3pts) + Mobile (13pts) = 16pts ✓ (fits in 20pt capacity)
+      - Onboarding (3pts) + API (5pts) + Analytics (8pts) = 16pts ✓
+      - Mobile alone uses 13pts, limits other options
+
+      RECOMMENDATION: Build Onboarding + Mobile
+      - Combined score: 15.50
+      - Uses 16/20 points (efficient)
+      - Addresses both UX improvement (onboarding) and strategic expansion (mobile)
+
+      Alternative if mobile is too risky: Onboarding + API + Analytics (16pts, score 14.30)
+
+      Sensitivity: Business impact weight is critical. If we reduce it to 20% and
+      increase Strategic fit to 25%, API integration becomes top choice.
+
+# Related models
+related_models:
+  - id: pugh_matrix
+    relationship: alternative
+    note: "Similar scoring approach but compares against a baseline option"
+
+  - id: analytic_hierarchy_process
+    relationship: extends
+    note: "More sophisticated pairwise comparison method for weights"
+
+  - id: expected_value
+    relationship: complementary
+    note: "Add probability weighting to handle uncertain outcomes"
+
+  - id: pareto_analysis
+    relationship: follows
+    note: "After scoring, use 80/20 rule to focus on highest-impact items"
+
+# References
+  - author: "Stuart Pugh"
+    title: "Pugh Matrix / Decision Matrix"
+    source: "Total Design: Integrated Methods for Successful Product Engineering"
+    year: 1990
+
+  - author: "Benjamin Franklin"
+    quote: "Prudential Algebra - list pros and cons, weight them"
+    note: "Early form of weighted decision making in letter to Joseph Priestley"
+    year: 1772
+
+  - url: "https://www.mindtools.com/amtbj63/decision-matrix-analysis"
+    title: "Decision Matrix Analysis"
+    source: "MindTools"
+    note: "Practical guide to building decision matrices"

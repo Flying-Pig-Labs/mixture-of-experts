@@ -1,0 +1,238 @@
+version: "1.0.0"
+registry_name: "MoE Mental Model Registry"
+description: "Curated library of mental models and decision-making frameworks"
+models_directory: "./models"
+schema_version: "1.0.0"
+
+# Model Categories
+categories:
+  risk_analysis:
+    name: "Risk Analysis & Mitigation"
+    description: "Models for identifying, assessing, and mitigating risks"
+    icon: "⚠️"
+    models:
+      - inversion
+      - pre_mortem
+      - risk_matrix
+      - failure_mode_analysis
+      - red_teaming
+
+  multi_criteria_decision:
+    name: "Multi-Criteria Decision Making"
+    description: "Comparing options across multiple dimensions"
+    icon: "📊"
+    models:
+      - weighted_decision_matrix
+      - pugh_matrix
+      - analytic_hierarchy_process
+      - cost_benefit_analysis
+
+  strategic_thinking:
+    name: "Strategic Thinking"
+    description: "Long-term planning and competitive analysis"
+    icon: "🎯"
+    models:
+      - second_order_thinking
+      - game_theory
+      - scenario_planning
+      - opportunity_cost
+      - sunk_cost_analysis
+
+  creative_thinking:
+    name: "Creative & Innovative Thinking"
+    description: "Generating novel solutions and perspectives"
+    icon: "💡"
+    models:
+      - first_principles
+      - lateral_thinking
+      - scamper
+      - design_thinking
+      - constraint_removal
+
+  probability_estimation:
+    name: "Probability & Uncertainty"
+    description: "Reasoning under uncertainty"
+    icon: "🎲"
+    models:
+      - bayesian_updating
+      - expected_value
+      - base_rate_analysis
+      - regression_to_mean
+      - monte_carlo_simulation
+
+  systems_thinking:
+    name: "Systems Thinking"
+    description: "Understanding complex interconnections"
+    icon: "🔄"
+    models:
+      - feedback_loops
+      - leverage_points
+      - systems_archetypes
+      - stock_and_flow
+      - emergence
+
+  bias_mitigation:
+    name: "Bias Awareness & Mitigation"
+    description: "Counteracting cognitive biases"
+    icon: "🧠"
+    models:
+      - confirmation_bias_check
+      - anchoring_awareness
+      - availability_heuristic_check
+      - planning_fallacy_check
+      - overconfidence_calibration
+
+  resource_allocation:
+    name: "Resource Allocation"
+    description: "Optimizing time, money, and attention"
+    icon: "⚖️"
+    models:
+      - pareto_analysis
+      - eisenhower_matrix
+      - time_value_of_money
+      - marginal_analysis
+
+# Tag Index (for fast search)
+tags_index:
+  risk:
+    - inversion
+    - pre_mortem
+    - risk_matrix
+    - failure_mode_analysis
+    - red_teaming
+
+  strategy:
+    - second_order_thinking
+    - game_theory
+    - scenario_planning
+    - opportunity_cost
+    - blue_ocean_strategy
+
+  innovation:
+    - first_principles
+    - lateral_thinking
+    - scamper
+    - design_thinking
+    - constraint_removal
+
+  comparison:
+    - weighted_decision_matrix
+    - pugh_matrix
+    - analytic_hierarchy_process
+    - cost_benefit_analysis
+
+  uncertainty:
+    - bayesian_updating
+    - expected_value
+    - monte_carlo_simulation
+    - scenario_planning
+    - base_rate_analysis
+
+  prioritization:
+    - pareto_analysis
+    - eisenhower_matrix
+    - weighted_decision_matrix
+    - opportunity_cost
+
+  bias:
+    - confirmation_bias_check
+    - anchoring_awareness
+    - availability_heuristic_check
+    - inversion
+    - pre_mortem
+
+  quick:
+    - pareto_analysis
+    - eisenhower_matrix
+    - inversion
+    - opportunity_cost
+
+  comprehensive:
+    - scenario_planning
+    - weighted_decision_matrix
+    - systems_thinking
+    - monte_carlo_simulation
+
+# Use Case Index
+use_cases:
+  vendor_selection:
+    recommended_models:
+      - weighted_decision_matrix
+      - cost_benefit_analysis
+      - risk_matrix
+    typical_time: "1-2 hours"
+
+  hiring_decisions:
+    recommended_models:
+      - weighted_decision_matrix
+      - inversion
+      - reference_class_forecasting
+    typical_time: "45-90 minutes"
+
+  product_launches:
+    recommended_models:
+      - pre_mortem
+      - inversion
+      - scenario_planning
+      - risk_matrix
+    typical_time: "2-3 hours"
+
+  strategic_planning:
+    recommended_models:
+      - second_order_thinking
+      - scenario_planning
+      - game_theory
+      - opportunity_cost
+    typical_time: "3-5 hours"
+
+  feature_prioritization:
+    recommended_models:
+      - weighted_decision_matrix
+      - pareto_analysis
+      - opportunity_cost
+      - eisenhower_matrix
+    typical_time: "1-2 hours"
+
+  investment_decisions:
+    recommended_models:
+      - expected_value
+      - risk_matrix
+      - second_order_thinking
+      - opportunity_cost
+    typical_time: "2-4 hours"
+
+  crisis_response:
+    recommended_models:
+      - inversion
+      - second_order_thinking
+      - risk_matrix
+      - scenario_planning
+    typical_time: "30-60 minutes (urgent)"
+
+# Model Status
+model_status:
+  implemented:
+    - inversion
+    - weighted_decision_matrix
+
+  in_development:
+    - pre_mortem
+    - first_principles
+    - second_order_thinking
+
+  planned:
+    - expected_value
+    - scenario_planning
+    - pareto_analysis
+    - risk_matrix
+    - bayesian_updating
+
+# Statistics
+stats:
+  total_models: 2
+  total_categories: 8
+  average_completion_time: "25 minutes"
+  most_popular_tags:
+    - risk
+    - strategy
+    - comparison

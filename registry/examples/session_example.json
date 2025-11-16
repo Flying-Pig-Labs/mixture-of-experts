@@ -1,0 +1,309 @@
+{
+  "session_id": "session-f8a3b2c1",
+  "created_at": "2025-11-16T14:30:00Z",
+  "updated_at": "2025-11-16T15:15:00Z",
+  "status": "completed",
+  "version": "0.1.0",
+
+  "problem": {
+    "description": "Should we migrate from monolithic architecture to microservices?",
+    "domain": "technical",
+    "decision_type": "strategic",
+    "context": {
+      "team_size": 8,
+      "current_architecture": "Ruby on Rails monolith",
+      "pain_points": [
+        "Slow deployment cycles (2 weeks)",
+        "Difficult to scale specific components",
+        "New engineers take 2-3 months to ramp up"
+      ],
+      "timeline": "Considering Q1 2026",
+      "budget": "Limited - existing team only"
+    },
+    "tags": ["architecture", "technical_strategy", "risk"],
+    "urgency": "strategic"
+  },
+
+  "suggested_models": [
+    {
+      "model_id": "inversion",
+      "name": "Inversion",
+      "relevance_score": 0.94,
+      "reason": "High-risk technical decision - inversion helps identify failure modes before committing",
+      "category": "risk_analysis",
+      "estimated_time_minutes": 20,
+      "complexity": "moderate",
+      "selected": true,
+      "selected_at": "2025-11-16T14:35:00Z"
+    },
+    {
+      "model_id": "weighted_decision_matrix",
+      "name": "Weighted Decision Matrix",
+      "relevance_score": 0.87,
+      "reason": "Multiple architecture options (monolith, microservices, modular monolith) with different trade-offs",
+      "category": "multi_criteria_decision",
+      "estimated_time_minutes": 30,
+      "complexity": "simple",
+      "selected": false
+    },
+    {
+      "model_id": "second_order_thinking",
+      "name": "Second-Order Thinking",
+      "relevance_score": 0.82,
+      "reason": "Architecture changes have long-term cascading effects on team, velocity, and operations",
+      "category": "strategic_thinking",
+      "estimated_time_minutes": 25,
+      "complexity": "moderate",
+      "selected": false
+    }
+  ],
+
+  "selected_model": {
+    "model_id": "inversion",
+    "name": "Inversion",
+    "selected_at": "2025-11-16T14:35:00Z",
+    "category": "risk_analysis"
+  },
+
+  "questions": [
+    {
+      "id": "goal",
+      "prompt": "What is the primary outcome you're aiming for?",
+      "type": "text",
+      "required": true,
+      "answered": true,
+      "answer": "Successfully migrate to microservices by Q3 2026 with improved deployment velocity (<1 day) and better scalability",
+      "answered_at": "2025-11-16T14:40:00Z",
+      "answer_source": "interactive"
+    },
+    {
+      "id": "failure_modes",
+      "prompt": "What are the worst plausible failure scenarios? (List one per line)",
+      "type": "multiline",
+      "required": true,
+      "answered": true,
+      "answer": "Team lacks distributed systems expertise - leads to poor service boundaries\nOperational complexity explosion - 15 services vs 1 monolith overwhelming DevOps\nDevelopment velocity drops 60% during migration - deadlines missed, team morale suffers\nData consistency issues between services cause production bugs\nCost overrun - infrastructure costs 3x higher than projected\nIncomplete migration - stuck in worst of both worlds (hybrid hell)",
+      "answered_at": "2025-11-16T14:45:00Z",
+      "answer_source": "interactive"
+    },
+    {
+      "id": "current_mitigations",
+      "prompt": "What are you currently doing to prevent these failures? (Optional)",
+      "type": "multiline",
+      "required": false,
+      "answered": true,
+      "answer": "Attended 2-day microservices workshop\nHave monitoring in place (Datadog)\nPlanning to hire 1 senior distributed systems engineer\nRead several books and articles on microservices patterns",
+      "answered_at": "2025-11-16T14:50:00Z",
+      "answer_source": "interactive"
+    },
+    {
+      "id": "constraints",
+      "prompt": "Are there any constraints that limit your ability to mitigate risks? (Optional)",
+      "type": "text",
+      "required": false,
+      "answered": true,
+      "answer": "Limited budget - can't afford consultants or more than 1 new hire. Timeline pressure from leadership to 'modernize' by EOY 2026.",
+      "answered_at": "2025-11-16T14:52:00Z",
+      "answer_source": "interactive"
+    }
+  ],
+
+  "validation": {
+    "validated_at": "2025-11-16T14:53:00Z",
+    "status": "valid",
+    "all_required_answered": true,
+    "missing_required": [],
+    "validation_errors": []
+  },
+
+  "report": {
+    "generated_at": "2025-11-16T15:10:00Z",
+    "model_applied": "inversion",
+    "llm_model": "claude-sonnet-4-5-20250929",
+    "tokens_used": {
+      "input": 2847,
+      "output": 3912,
+      "total": 6759
+    },
+
+    "executive_summary": {
+      "recommendation": "DELAY - Postpone migration for 6-9 months",
+      "confidence": 0.73,
+      "key_insight": "Inverting the question reveals 8 critical failure modes, 6 of which currently lack adequate mitigation. Current organizational readiness is insufficient for successful migration. Primary risks are skill gaps (no production microservices experience) and operational unpreparedness (no service mesh, immature CI/CD)."
+    },
+
+    "failure_mode_analysis": {
+      "user_identified": [
+        {
+          "failure_mode": "Team lacks distributed systems expertise",
+          "probability": 9,
+          "impact": 9,
+          "risk_score": 81,
+          "current_mitigation": "WEAK",
+          "gap": "Workshop and reading are insufficient. Need hands-on experience. Planning to hire 1 engineer doesn't scale knowledge across team of 8."
+        },
+        {
+          "failure_mode": "Operational complexity explosion",
+          "probability": 8,
+          "impact": 8,
+          "risk_score": 64,
+          "current_mitigation": "WEAK",
+          "gap": "Monitoring exists but no service mesh, distributed tracing, or automated service discovery. DevOps burden will multiply 10-15x."
+        },
+        {
+          "failure_mode": "Development velocity drops 60%",
+          "probability": 9,
+          "impact": 7,
+          "risk_score": 63,
+          "current_mitigation": "NONE",
+          "gap": "No plan to manage velocity drop. Will miss business deadlines and damage team morale."
+        },
+        {
+          "failure_mode": "Data consistency issues",
+          "probability": 7,
+          "impact": 9,
+          "risk_score": 63,
+          "current_mitigation": "NONE",
+          "gap": "No strategy for distributed transactions, event sourcing, or saga patterns."
+        },
+        {
+          "failure_mode": "Cost overrun",
+          "probability": 7,
+          "impact": 6,
+          "risk_score": 42,
+          "current_mitigation": "NONE",
+          "gap": "No infrastructure cost modeling. Microservices typically cost 2-4x more (compute, data transfer, overhead)."
+        },
+        {
+          "failure_mode": "Incomplete migration (hybrid hell)",
+          "probability": 8,
+          "impact": 8,
+          "risk_score": 64,
+          "current_mitigation": "NONE",
+          "gap": "No clear migration roadmap, strangler fig pattern, or completion criteria."
+        }
+      ],
+
+      "hidden_failure_modes": [
+        {
+          "failure_mode": "Loss of transactional boundaries causes data corruption",
+          "probability": 7,
+          "impact": 10,
+          "risk_score": 70,
+          "why_overlooked": "Not obvious until production load. Monolith's DB transactions mask the complexity of distributed data management."
+        },
+        {
+          "failure_mode": "Service dependency cascade failures",
+          "probability": 8,
+          "impact": 8,
+          "risk_score": 64,
+          "why_overlooked": "New failure mode that doesn't exist in monolith. Circuit breakers, retry logic, and fallback strategies all missing."
+        },
+        {
+          "failure_mode": "Debugging becomes 10x harder",
+          "probability": 9,
+          "impact": 6,
+          "risk_score": 54,
+          "why_overlooked": "Distributed tracing and correlation IDs not in place. Finding root cause across 15 services vs 1 codebase is exponentially harder."
+        },
+        {
+          "failure_mode": "Team fractures into service silos",
+          "probability": 6,
+          "impact": 7,
+          "risk_score": 42,
+          "why_overlooked": "Organizational impact often ignored. Engineers become 'the payments service person' vs full-stack knowledge sharing."
+        }
+      ]
+    },
+
+    "mitigation_priority": [
+      {
+        "rank": 1,
+        "failure_mode": "Team lacks distributed systems expertise",
+        "risk_score": 81,
+        "current_mitigation": "WEAK",
+        "recommended_action": "Before migration: (1) Extract 1-2 non-critical services as learning project (6 months), (2) Entire team participates in design + code reviews, (3) Hire senior engineer AND have them mentor team for 3 months",
+        "effort": "HIGH",
+        "priority": "P0"
+      },
+      {
+        "rank": 2,
+        "failure_mode": "Loss of transactional boundaries",
+        "risk_score": 70,
+        "current_mitigation": "NONE",
+        "recommended_action": "Design distributed transaction strategy: Event sourcing OR Saga pattern OR 2-phase commit. Prototype with 2 services before full migration.",
+        "effort": "HIGH",
+        "priority": "P0"
+      },
+      {
+        "rank": 3,
+        "failure_mode": "Operational complexity explosion",
+        "risk_score": 64,
+        "current_mitigation": "WEAK",
+        "recommended_action": "Infrastructure prep (3-4 months): Service mesh (Istio/Linkerd), distributed tracing (Jaeger), centralized logging, auto-scaling, GitOps CI/CD",
+        "effort": "HIGH",
+        "priority": "P0"
+      },
+      {
+        "rank": 4,
+        "failure_mode": "Service dependency cascade failures",
+        "risk_score": 64,
+        "current_mitigation": "NONE",
+        "recommended_action": "Implement: Circuit breakers, retry with exponential backoff, bulkheads, health checks, graceful degradation patterns",
+        "effort": "MEDIUM",
+        "priority": "P0"
+      },
+      {
+        "rank": 5,
+        "failure_mode": "Development velocity drops 60%",
+        "risk_score": 63,
+        "current_mitigation": "NONE",
+        "recommended_action": "Plan for reality: Velocity WILL drop. Communicate to leadership. Reduce feature commitments by 40% during migration (6-9 months). Prioritize ruthlessly.",
+        "effort": "LOW",
+        "priority": "P1"
+      }
+    ],
+
+    "recommendation_detail": {
+      "decision": "DELAY",
+      "confidence": 0.73,
+      "timeline": "Delay migration 6-9 months for proper preparation",
+      "conditions_to_proceed": [
+        "Team has successfully extracted and operated 2 non-critical services for 3+ months",
+        "Senior distributed systems engineer hired and has trained team",
+        "Service mesh and observability infrastructure operational",
+        "Distributed transaction strategy designed and validated",
+        "Leadership accepts 40% velocity reduction during migration period"
+      ],
+      "priority_actions": [
+        "Month 1-2: Hire senior distributed systems engineer, set up infrastructure (service mesh, tracing, CI/CD)",
+        "Month 3-5: Extract first non-critical service (e.g., notifications) as learning project, entire team participates",
+        "Month 6-7: Extract second service (e.g., background jobs), validate operational patterns",
+        "Month 8-9: Design service boundaries for core domain, data consistency strategy, migration roadmap",
+        "Month 10: Decision checkpoint - reassess readiness with checklist"
+      ],
+      "decision_checkpoint": "After 9 months of preparation, reassess with readiness checklist. Proceed only if all P0 mitigations are STRONG.",
+      "alternative_recommendation": "Consider modular monolith approach instead: Refactor into clear bounded contexts within monolith. Gain many benefits (better boundaries, independent deployability of modules) without microservices complexity. Revisit microservices when team size >20 or clear scaling need emerges."
+    },
+
+    "full_report_path": "~/.moe/sessions/session-f8a3b2c1/report.md",
+    "full_report_size_kb": 12.4
+  },
+
+  "metadata": {
+    "cli_version": "0.1.0",
+    "mcp_server_version": "0.1.0",
+    "session_duration_seconds": 2700,
+    "total_questions": 4,
+    "questions_answered": 4,
+    "user_interactions": 8,
+    "llm_calls": 2
+  },
+
+  "user_feedback": {
+    "submitted": false,
+    "rating": null,
+    "helpful": null,
+    "comments": null
+  }
+}

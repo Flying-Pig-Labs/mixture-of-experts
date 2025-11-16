@@ -1,0 +1,232 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://flying-pig-labs.com/schemas/mental-model.schema.json",
+  "title": "Mental Model Definition",
+  "description": "Schema for defining a mental model or decision-making framework in the MoE registry",
+  "type": "object",
+  "required": ["id", "name", "category", "short_description", "best_for", "complexity", "required_inputs", "application_template"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9_]+$",
+      "description": "Unique identifier (snake_case)",
+      "examples": ["inversion", "weighted_decision_matrix"]
+    },
+    "name": {
+      "type": "string",
+      "description": "Human-readable name",
+      "examples": ["Inversion", "Weighted Decision Matrix"]
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "risk_analysis",
+        "multi_criteria_decision",
+        "strategic_thinking",
+        "creative_thinking",
+        "probability_estimation",
+        "systems_thinking",
+        "bias_mitigation",
+        "resource_allocation"
+      ],
+      "description": "Primary category for this model"
+    },
+    "tags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Searchable tags",
+      "examples": [["risk", "strategy", "critical_thinking"]]
+    },
+    "short_description": {
+      "type": "string",
+      "maxLength": 200,
+      "description": "Brief one-liner description"
+    },
+    "long_description": {
+      "type": "string",
+      "description": "Detailed explanation with context, history, and usage"
+    },
+    "best_for": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1,
+      "description": "Situations where this model excels",
+      "examples": [["Risk identification", "Strategy validation", "Quality assurance"]]
+    },
+    "avoid_when": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Situations to avoid using this model"
+    },
+    "complexity": {
+      "type": "string",
+      "enum": ["simple", "moderate", "complex"],
+      "description": "Difficulty level"
+    },
+    "estimated_time_minutes": {
+      "type": "integer",
+      "minimum": 5,
+      "maximum": 480,
+      "description": "Typical time to complete (in minutes)"
+    },
+    "expertise_required": {
+      "type": "string",
+      "enum": ["none", "basic", "intermediate", "expert"],
+      "default": "none"
+    },
+    "required_inputs": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/input_field"
+      },
+      "minItems": 1,
+      "description": "Required user inputs to apply this model"
+    },
+    "optional_inputs": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/input_field"
+      },
+      "description": "Optional inputs that enhance the analysis"
+    },
+    "application_template": {
+      "type": "string",
+      "description": "LLM prompt template for applying this model (Jinja2 format)"
+    },
+    "examples": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/example"
+      },
+      "description": "Example applications of this model"
+    },
+    "related_models": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/related_model"
+      },
+      "description": "Other models that work well with this one"
+    },
+    "references": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/reference"
+      },
+      "description": "Academic or popular references"
+    }
+  },
+  "definitions": {
+    "input_field": {
+      "type": "object",
+      "required": ["id", "prompt", "type"],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z0-9_]+$",
+          "description": "Field identifier"
+        },
+        "prompt": {
+          "type": "string",
+          "description": "Question to ask the user"
+        },
+        "type": {
+          "type": "string",
+          "enum": ["text", "multiline", "list", "number", "weights", "boolean", "date", "choice"],
+          "description": "Input type"
+        },
+        "placeholder": {
+          "type": "string",
+          "description": "Example or placeholder text"
+        },
+        "guidance": {
+          "type": "string",
+          "description": "Additional guidance for answering"
+        },
+        "validation": {
+          "type": "object",
+          "description": "Validation rules",
+          "properties": {
+            "min_length": {"type": "integer"},
+            "max_length": {"type": "integer"},
+            "min_value": {"type": "number"},
+            "max_value": {"type": "number"},
+            "min_items": {"type": "integer"},
+            "max_items": {"type": "integer"},
+            "pattern": {"type": "string"},
+            "sum_to": {"type": "number"},
+            "all_positive": {"type": "boolean"},
+            "optional": {"type": "boolean"}
+          }
+        },
+        "depends_on": {
+          "type": "string",
+          "description": "ID of field this depends on"
+        },
+        "choices": {
+          "type": "array",
+          "items": {"type": "string"},
+          "description": "Valid choices (for choice type)"
+        }
+      }
+    },
+    "example": {
+      "type": "object",
+      "required": ["name", "problem", "answers"],
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "Example name"
+        },
+        "problem": {
+          "type": "string",
+          "description": "Problem description"
+        },
+        "answers": {
+          "type": "object",
+          "description": "User inputs (key-value pairs)"
+        },
+        "outcome": {
+          "type": "string",
+          "description": "Analysis result or key insight"
+        }
+      }
+    },
+    "related_model": {
+      "type": "object",
+      "required": ["id", "relationship"],
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Related model ID"
+        },
+        "relationship": {
+          "type": "string",
+          "enum": ["prerequisite", "complementary", "alternative", "follows", "extends"],
+          "description": "Nature of relationship"
+        },
+        "note": {
+          "type": "string",
+          "description": "Explanation of relationship"
+        }
+      }
+    },
+    "reference": {
+      "type": "object",
+      "properties": {
+        "author": {"type": "string"},
+        "title": {"type": "string"},
+        "source": {"type": "string"},
+        "url": {"type": "string", "format": "uri"},
+        "year": {"type": "integer"},
+        "quote": {"type": "string"},
+        "note": {"type": "string"}
+      }
+    }
+  }
+}

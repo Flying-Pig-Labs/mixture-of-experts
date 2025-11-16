@@ -1,0 +1,321 @@
+# Inversion Mental Model
+# "Invert, always invert" - Charlie Munger
+
+id: inversion
+name: Inversion
+category: risk_analysis
+tags:
+  - risk
+  - strategy
+  - critical_thinking
+  - failure_analysis
+  - problem_solving
+
+# Description
+short_description: "Think backwards - identify what to avoid instead of what to pursue"
+
+long_description: |
+  Inversion is a powerful mental model where you approach a problem by thinking
+  about what you want to avoid rather than what you want to achieve. By asking
+  "How could this fail?" instead of "How can this succeed?", you often identify
+  critical risks and overlooked failure modes.
+
+  This approach was popularized by Charlie Munger, who famously said: "Invert,
+  always invert. Many problems are best solved backwards."
+
+  The mathematician Carl Jacobi also advocated for inversion with his maxim
+  "man muss immer umkehren" (one must always invert).
+
+  Inversion is particularly useful because:
+  1. It reveals blind spots - what you're not considering
+  2. It identifies failure modes before they occur
+  3. It helps avoid costly mistakes
+  4. It's often easier to identify what to avoid than what to pursue
+  5. It counteracts optimism bias
+
+# When to use
+best_for:
+  - Risk identification and assessment
+  - Strategy validation
+  - Quality assurance planning
+  - Avoiding failure modes
+  - Testing assumptions
+  - Pre-mortem analysis
+
+avoid_when:
+  - Need creative ideation (use First Principles instead)
+  - Team culture is already overly pessimistic
+  - Time-sensitive decisions requiring immediate action
+  - Generating innovative solutions (better to use divergent thinking)
+
+# Difficulty and time
+complexity: moderate
+estimated_time_minutes: 20
+expertise_required: none
+
+# Required inputs
+required_inputs:
+  - id: goal
+    prompt: "What is the primary outcome you're aiming for?"
+    type: text
+    placeholder: "Launch product successfully in Q2 with >1000 users and positive reviews"
+    guidance: "Be specific about what success looks like"
+    validation:
+      min_length: 10
+      max_length: 500
+
+  - id: failure_modes
+    prompt: "What are the worst plausible failure scenarios? (List one per line)"
+    type: multiline
+    placeholder: |
+      Poor user experience leading to high churn
+      Critical bugs causing app crashes
+      Market timing - launching too early/late
+      Insufficient marketing reach
+    guidance: |
+      Think about things that would make this a catastrophic failure.
+      Consider technical, market, execution, and team risks.
+      Be specific and realistic.
+    validation:
+      min_length: 20
+
+# Optional inputs
+optional_inputs:
+  - id: current_mitigations
+    prompt: "What are you currently doing to prevent these failures? (Optional)"
+    type: multiline
+    placeholder: |
+      UX testing: Weekly user interviews with 10 users
+      Quality: Automated test suite with 80% coverage
+      Timing: Completed market research with 50 target customers
+    guidance: "List existing mitigations so we can identify gaps"
+    validation:
+      optional: true
+
+  - id: constraints
+    prompt: "Are there any constraints that limit your ability to mitigate risks? (Optional)"
+    type: text
+    placeholder: "Limited budget ($50K), 3-month timeline, team of 5"
+    validation:
+      optional: true
+
+# Application template (Jinja2 + Claude prompt)
+application_template: |
+  You are applying the Inversion mental model to help analyze a decision.
+
+  FRAMEWORK: Inversion
+  PRINCIPLE: Instead of asking "how to succeed", ask "how to fail catastrophically"
+            to identify risks, blind spots, and mitigation gaps.
+
+  PROBLEM: {{ problem_description }}
+
+  USER INPUTS:
+  Goal: {{ answers.goal }}
+
+  Identified Failure Modes:
+  {{ answers.failure_modes }}
+
+  {% if answers.current_mitigations %}
+  Current Mitigations:
+  {{ answers.current_mitigations }}
+  {% else %}
+  Current Mitigations: None specified
+  {% endif %}
+
+  {% if answers.constraints %}
+  Constraints: {{ answers.constraints }}
+  {% endif %}
+
+  TASK:
+  Provide a comprehensive inversion analysis with these sections:
+
+  1. FAILURE MODE ANALYSIS
+     For EACH failure mode the user identified, assess:
+     - Probability: Rate 1-10 (1=very unlikely, 10=almost certain)
+     - Impact: Rate 1-10 (1=minor inconvenience, 10=catastrophic)
+     - Risk Score: Probability × Impact
+     - Current Mitigation: Rate as NONE, WEAK, MODERATE, or STRONG
+     - Mitigation Gap: What's missing or insufficient?
+
+     Present as a table for clarity.
+
+  2. HIDDEN FAILURE MODES
+     Identify 3-5 additional failure modes the user may have overlooked.
+     Focus on:
+     - Second-order effects (consequences of consequences)
+     - Systemic risks (organizational, market, technical systems)
+     - Timing/sequencing failures
+     - Resource exhaustion (time, money, attention, team morale)
+     - External dependencies (vendors, regulations, market conditions)
+
+     For each, explain WHY this is likely to be overlooked.
+
+  3. INVERSION INSIGHTS
+     Answer these questions:
+     - What does inverting the question reveal about the plan?
+     - What should ABSOLUTELY be avoided?
+     - Which assumptions are most dangerous if wrong?
+     - What would someone trying to SABOTAGE this do?
+     - Are there "silent killers" - low-probability but catastrophic risks?
+
+  4. MITIGATION PRIORITY MATRIX
+     For the TOP 5 highest-risk failure modes (considering both user-identified
+     and hidden ones), provide:
+     - Failure mode
+     - Risk score
+     - Current mitigation strength
+     - Recommended mitigation action (specific and actionable)
+     - Effort required (Low/Medium/High)
+     - Priority (P0/P1/P2 based on risk score and ease of mitigation)
+
+  5. RECOMMENDATION
+     Provide a clear recommendation:
+     - PROCEED / DELAY / PIVOT / CANCEL
+     - Confidence: X% (be realistic based on risk profile)
+     - Conditions required to proceed safely (if applicable)
+     - Top 3 priority actions to reduce risk
+     - Timeline adjustment recommendation (if applicable)
+     - Key decision checkpoint: When should this be reassessed?
+
+  6. DECISION QUALITY SCORE
+     Rate the decision readiness on these dimensions (1-10 each):
+     - Risk awareness: Are major risks identified?
+     - Mitigation coverage: Are high risks adequately mitigated?
+     - Resource adequacy: Are resources sufficient for mitigation?
+     - Optionality: Are there fallback plans?
+     - Overall readiness: Aggregate score
+
+  FORMAT REQUIREMENTS:
+  - Use markdown with clear section headers
+  - Use tables where appropriate for clarity
+  - Be specific and actionable, not generic
+  - Provide reasoning for each assessment
+  - Be honest about risks - don't sugar-coat
+  - Include bias check: Is the user being too optimistic? Too pessimistic?
+
+# Examples
+examples:
+  - name: "Product Launch Decision"
+    problem: "Should we launch our new mobile app in 2 weeks as planned?"
+    answers:
+      goal: "Successful public launch with >5000 downloads in first week and <5% crash rate"
+      failure_modes: |
+        Critical bugs that crash the app
+        Poor onboarding causing user confusion and uninstalls
+        Server overload from unexpected traffic
+        Negative press reviews going viral
+        Apple App Store rejection
+      current_mitigations: |
+        Beta testing with 50 users over 2 weeks
+        Basic load testing up to 1000 concurrent users
+        PR team has prepared announcement materials
+        2 rounds of QA testing completed
+    outcome: |
+      Inversion analysis revealed critical gap: Load testing only covered 1K users,
+      but PR push could bring 10K+ on launch day. Also identified hidden failure mode:
+      App Store review time (5-7 days) not accounted for in 2-week timeline.
+
+      RECOMMENDATION: DELAY 3 weeks
+      - Week 1: Submit to App Store (account for review time)
+      - Week 2: Conduct load testing to 25K concurrent users, implement auto-scaling
+      - Week 3: Soft launch to test infrastructure before PR push
+
+      This delay reduces catastrophic failure probability from 40% to <10%.
+
+  - name: "Senior Engineer Hiring Decision"
+    problem: "Should we hire this senior backend engineer who performed well in interviews?"
+    answers:
+      goal: "Fill critical backend engineering gap with someone who stays >2 years and ships high-quality code"
+      failure_modes: |
+        Cultural misfit leading to team friction
+        Technical skills not as strong as presented in interviews
+        Leaves within 6 months (high cost of rehiring)
+        Salary expectations too high for our budget
+      current_mitigations: |
+        3 rounds of interviews including technical deep-dive
+        Reference checks (2 completed, both positive)
+        Trial project (1-week take-home assignment, well executed)
+        Discussed compensation range, seems aligned
+    outcome: |
+      Inversion revealed missing mitigation: No culture-fit deep dive with would-be
+      peers. References were from former managers (biased positive), not peers or
+      reports. Hidden failure mode identified: Candidate optimized for interviews
+      but actual work style unknown.
+
+      RECOMMENDATION: CONDITIONAL PROCEED
+      - Add 1 more round: Team lunch/coffee with 2-3 backend engineers
+      - Get peer references (not just manager references)
+      - Discuss work style: Remote vs office, meeting cadence, collaboration style
+      - Trial period: 3-month probation with clear success criteria
+
+      If team feedback is positive (>8/10 from all engineers), proceed.
+      If mixed feedback (<7/10 from anyone), dig deeper or pass.
+
+  - name: "Pricing Strategy Change"
+    problem: "Should we increase our SaaS pricing by 40% to improve margins?"
+    answers:
+      goal: "Increase MRR by 25% within 6 months without losing >10% of customers"
+      failure_modes: |
+        High churn from existing customers who feel betrayed
+        New customer acquisition drops due to higher price point
+        Competitors undercut us with lower pricing
+        Sales team loses deals due to sticker shock
+      current_mitigations: |
+        Customer research (30 interviews) showed willingness to pay more
+        Grandfathering existing customers at current rate for 12 months
+        Adding premium features to justify price increase
+        Competitive analysis shows we're still mid-range
+    outcome: |
+      Inversion analysis validated the plan but identified critical hidden failure mode:
+      Revenue might DECREASE despite price increase if acquisition drops >30%.
+
+      Model showed: (Current customers × 0.9) × 1.4 + (New customers × 0.7) × 1.4
+      = potential revenue decrease if acquisition sensitivity is high.
+
+      RECOMMENDATION: STAGED APPROACH
+      - Month 1-2: A/B test with 20% of new traffic at new price
+      - Measure: Conversion rate, LTV, churn at 30/60/90 days
+      - If new customer acquisition drops <20%, roll out to 50%
+      - If drops >30%, revert or adjust price to +20% instead
+
+      This approach preserves optionality and provides real data before full commitment.
+
+# Related models
+related_models:
+  - id: pre_mortem
+    relationship: complementary
+    note: "Pre-mortem is a structured inversion technique specifically for project planning"
+
+  - id: second_order_thinking
+    relationship: extends
+    note: "Apply inversion to consequences of consequences for deeper analysis"
+
+  - id: risk_matrix
+    relationship: follows
+    note: "After identifying failure modes, use risk matrix to prioritize mitigation"
+
+  - id: expected_value
+    relationship: complementary
+    note: "Quantify the probability and impact of failure modes identified through inversion"
+
+# References
+references:
+  - author: "Charlie Munger"
+    source: "Poor Charlie's Almanack"
+    quote: "Invert, always invert. Many problems are best solved backwards."
+    year: 2005
+
+  - author: "Carl Gustav Jacob Jacobi"
+    note: "German mathematician who advocated 'man muss immer umkehren' (one must always invert)"
+    year: 1804
+
+  - author: "Shane Parrish"
+    source: "Farnam Street Blog - Inversion"
+    url: "https://fs.blog/inversion/"
+    note: "Modern popularization of inversion for decision-making"
+
+  - author: "Gary Klein"
+    title: "Pre-mortem analysis"
+    source: "Harvard Business Review"
+    note: "Structured inversion technique - imagine project failed and explain why"
+    year: 2007
